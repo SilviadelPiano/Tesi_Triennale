@@ -142,7 +142,6 @@ Di seguito i lo-fi mockup, realizzati con carta e penna, rapprensentano ciò che
 	\label{fig:mockup_4}
 \end{figure}
 
-\newpage
 \subsection{User Stories}
 Di seguito si riporta l'elenco delle user stories: descrivono brevemente ma in maniera efficace le azioni che verranno implementate fornendo i servizi precedentemente descritti agli utenti.\\
 
@@ -378,11 +377,23 @@ Sono indicati anche gli identificatori principali.
 
 \section{Elenco delle entità e delle relazioni}
 
-Elenco delle entità e delle relazioni (saranno spese due parole su ogni relazione, per giustificare le molteplicità se necessario) 
+In questa sezione verranno presentate in maniera più approfondita le varie entità e relazioni situate nello schema.
+\subsection{Generalizzazione User}
+\textbf{User} è l'entità che rappresenta l'utente che andrà ad usufruire dell'applicazione: si può notare infatti la generalizzazione che differenzia i tre tipi di utilizzatori che si avranno.\\
+\textbf{Parent} e \textbf{Student}, cioè le entità che rappresentano il genitore e lo studente, sono legate dalla relazione \textbf{ChildOf}: essa esprime la parentela tra lo studente iscritto e il genitore (potrebbe essere anche il tutore legale del ragazzo in mancanza di parenti più stretti) dello stesso. Un Parent per registrarsi sulla piattaforma deve avere almeno un figlio Student registrato su di essa. D'altro canto, uno Student non deve per forza avere un Parent ad esso associato per registrarsi, ma può averne al massimo 2 associati ad esso.\\
+Durante la ristrutturazione Parent, Student e Teacher sono state accorpate a User per generare un'unica entità omonima, dove i vari ruoli sono distinti da un flag, tramite l'ausilio della gemma Canard.
 
-\section{Glossario dei dati}
+\subsection{Entità School e Class}
+L'entità \textbf{School} rappresenta la scuola registrata nel database dell'applicazione, ed è legata a \textbf{Class} tramite la relazione \textbf{Has}. Class è infatti identificata dal proprio nome e dalla Scuola a cui appartiene. Per esempio, la classe 1\ap{a} del liceo scientifico sarà presente in tutti i licei scientifici, ed almeno in 1, altrimenti non esisterebbe, da qui l'associazione 1...n. Una Scuola deve avere almeno una classe.\\
+La relazione \textbf{Teaches} esprime l'incarico di insegnamento conferito ad un \textbf{Teacher} (insegnante) nei confronti della classe, ed è presente anche la materia (subject) oggetto di lezione. Ogni classe può essere presa in carico da diversi insegnanti, ma ne deve avere almeno 1 (si pensi solo alle varie materie presenti in  un liceo) ed un singolo insegnante, per essere tale, deve fare lezione ad almeno un classe, ma può averne affidate più di una.\\
+La relazione \textbf{MemberOf} invece esprime il fatto che ogni classe debba essere frequentata da almeno uno studente, e questo per essere tale deve, e può, essere iscritto ad una sola classe.\\
+Nella ristruttrazione Class e Has sono state accorpate per generare un'unica entità che tenga traccia del nome della classe e della scuola ad essa associata. School rimane singolarmente, in modo che nel futuro sia possibile associare ad essa più classi. Inoltre, al momento della registrazione
+all'utente viene chiesto di specificare una classe ed una scuola (in diversi punti dei form da compilare a seconda del ruolo), e sono effettuati due controlli: si verifica l'esistenza della singola scuola (School) nel database, e poi si verfica che per questa sia registrata la classe dichiarata nel form tramite l'entità appena creata con l'accorpamento. Quest'ultima è utile anche per motivi di efficienza del codice.
 
-Una tabella per ogni entità/relazione con il glossario dei dati (come quelle che ha fatto Jessica)
+\subsection{Entità Post}
+L'entità \textbf{Post} rappresenta le comunicazioni che possono essere fatte sulla piattaforma. Ogni Post deve essere creato da un singolo insegnante secondo quanto espresso dalla relazione \textbf{MadeBy}, mentre un insegnante non ha l'obbligo di creare Post, e non c'è limite a quanti ne può fare. L'attributo PublishDate registra la data della pubblicazione.
+Da notare gli attributi facoltativi Link e Deadline. Essi sono stati inseriti per fornire maggiori opzioni al fine di rendere più efficaci le comunicazioni: come insegnante vorrei poter mettere in evidenza un link dove trovare materiale utile oppure una scadenza o una data importante relativa alla comunicazione appena publicata (che sarà segnata sul calendario).\\
+Un Post deve essere associato ad almeno una classe, secondo quanto indicato dalla relazione \textbf{For}, in modo che i suoi membri possano vederlo.
 
 \chapter{Progettazione del sistema (fallo per ultimo, vedi se riesci coi tempi. Vedi quello che ha fatto Jessica}
 
