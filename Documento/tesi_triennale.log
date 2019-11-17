@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.16)  17 NOV 2019 22:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.16)  18 NOV 2019 00:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1371,18 +1371,17 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* hratio: 55:89
 * vratio: 55:89
 * bindingoffset: 17.07182pt
-* modes: includehead twoside heightrounded 
-* h-part:(L,W,R)=(70.44357pt, 396.0pt, 113.99248pt)
+* modes: includehead heightrounded 
+* h-part:(L,W,R)=(92.21802pt, 396.0pt, 92.21803pt)
 * v-part:(T,H,B)=(65.75981pt, 672.8738pt, 106.41324pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=396.0pt
 * \textheight=636.60028pt
-* \oddsidemargin=15.2454pt
-* \evensidemargin=41.72249pt
+* \oddsidemargin=37.01985pt
+* \evensidemargin=19.94803pt
 * \topmargin=-6.51018pt
 * \headheight=12.0pt
 * \headsep=19.8738pt
@@ -1396,8 +1395,8 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -1491,7 +1490,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<sapienza-MLred-pos.pdf, id=4, 288.07625pt x 89.33376pt>
+<sapienza-MLred-pos.pdf, id=108, 288.07625pt x 89.33376pt>
 File: sapienza-MLred-pos.pdf Graphic file (type pdf)
 <use sapienza-MLred-pos.pdf>
 Package pdftex.def Info: sapienza-MLred-pos.pdf  used on input line 79.
@@ -1551,21 +1550,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--79
 
  []
 
-[2
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.79 
+      [1
 
-] [3
+] [2
 
 
-] [4
-
-]
-
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
+] (./tesi_triennale.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 4.
+)
 \tf@toc=\write4
 \openout4 = `tesi_triennale.toc'.
 
-[5] [6
+ [3
 
 ]
 Capitolo 1.
@@ -1581,47 +1587,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--106
 
 [1
 
+
 ] [2]
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
-<images/mockup_1.jpg, id=57, 4047.12pt x 3035.34pt>
+<images/mockup_1.jpg, id=174, 4047.12pt x 3035.34pt>
 File: images/mockup_1.jpg Graphic file (type jpg)
 <use images/mockup_1.jpg>
 Package pdftex.def Info: images/mockup_1.jpg  used on input line 119.
 (pdftex.def)             Requested size: 514.80121pt x 386.086pt.
-<images/mockup_2.jpg, id=58, 4047.12pt x 3035.34pt>
+<images/mockup_2.jpg, id=175, 4047.12pt x 3035.34pt>
 File: images/mockup_2.jpg Graphic file (type jpg)
 <use images/mockup_2.jpg>
 Package pdftex.def Info: images/mockup_2.jpg  used on input line 126.
 (pdftex.def)             Requested size: 514.80121pt x 386.086pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3 <./images/mockup_1.JPG>]
-<images/mockup_3.jpg, id=65, 4047.12pt x 3035.34pt>
+[3 <./images/mockup_1.JPG>]
+<images/mockup_3.jpg, id=182, 4047.12pt x 3035.34pt>
 File: images/mockup_3.jpg Graphic file (type jpg)
 <use images/mockup_3.jpg>
 Package pdftex.def Info: images/mockup_3.jpg  used on input line 133.
 (pdftex.def)             Requested size: 514.80121pt x 386.086pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [4 <./images/mockup_2.JPG>]
-<images/mockup_4.jpg, id=71, 3035.34pt x 1226.5825pt>
-File: images/mockup_4.jpg Graphic file (type jpg)
-<use images/mockup_4.jpg>
-Package pdftex.def Info: images/mockup_4.jpg  used on input line 140.
-(pdftex.def)             Requ4 <./images/mockup_2.JPG>]
-<images/mockup_4.jpg, id=198, 3035.34pt x 1226.5825pt>
+<images/mockup_4.jpg, id=188, 3035.34pt x 1226.5825pt>
 File: images/mockup_4.jpg Graphic file (type jpg)
 <use images/mockup_4.jpg>
 Package pdftex.def Info: images/mockup_4.jpg  used on input line 140.
 (pdftex.def)             Requested size: 396.0pt x 160.0228pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [5 <./images/mockup_3.JPG>]
 Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
@@ -1751,7 +1744,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
 
-<images/oauth.png, id=253, 284.39583pt x 160.93459pt>
+<images/oauth.png, id=243, 284.39583pt x 160.93459pt>
 File: images/oauth.png Graphic file (type png)
 <use images/oauth.png>
 Package pdftex.def Info: images/oauth.png  used on input line 325.
@@ -1773,58 +1766,81 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  (./code/Gemfile
-[13]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14])
+[13] [14])
 Underfull \hbox (badness 10000) in paragraph at lines 347--348
 
  []
 
 [15] [16]
 Capitolo 3.
-<images/db_HiSchool.png, id=387, 668.4975pt x 563.10374pt>
+<images/db_HiSchool.png, id=377, 668.4975pt x 563.10374pt>
 File: images/db_HiSchool.png Graphic file (type png)
 <use images/db_HiSchool.png>
 Package pdftex.def Info: images/db_HiSchool.png  used on input line 373.
 (pdftex.def)             Requested size: 396.0pt x 333.57732pt.
+[17
 
-Underfull \vbox (badness 2478) has occurred while \output is active []
+ <./images/db_HiSchool.png>] [18] [19]
+Capitolo 4.
 
- [17
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
- <./images/db_HiSchool.png>] [18] [19] [20
+ []
+
+<images/controllers_UML.jpg, id=394, 980.66376pt x 946.53625pt>
+File: images/controllers_UML.jpg Graphic file (type jpg)
+<use images/controllers_UML.jpg>
+Package pdftex.def Info: images/controllers_UML.jpg  used on input line 410.
+(pdftex.def)             Requested size: 396.0pt x 382.21854pt.
+[20
 
 ]
-Capitolo 4.
-(./code/schema.rb [21]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 417--418
 
+ []
 
+<images/models_UML.jpg, id=399, 1008.76875pt x 517.935pt>
+File: images/models_UML.jpg Graphic file (type jpg)
+<use images/models_UML.jpg>
+Package pdftex.def Info: images/models_UML.jpg  used on input line 421.
+(pdftex.def)             Requested size: 396.0pt x 203.32153pt.
+[21 <./images/controllers_UML.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 432--436
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
-Make it at least 23.10004pt.
-We now make it that large for the rest of the document.
-This may cause the page layout to be inconsistent, however.
+ []
 
-[22])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 424.
- [23]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 424.
+(./code/schema.rb [22 <./images/models_UML.jpg>] [23]) [24]
+Capitolo 5.
+[25
+
+]
+Capitolo 6.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 461.
+[26
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 461.
  (./tesi_triennale.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 424.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 424.
-Package rerunfilecheck Info: File `tesi_triennale.out' has not changed.
-(rerunfilecheck)             Checksum: 71BBA0EC0E29DC5B58594046739BA79A;2036.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 461.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 461.
+
+
+Package rerunfilecheck Warning: File `tesi_triennale.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `tesi_triennale.out':
+(rerunfilecheck)             Before: E356AFFA3384F40BEE2E552D8B444B09;1957
+(rerunfilecheck)             After:  6E6989B079A3921FFEC883D5F1DEFD5A;2321.
  ) 
 Here is how much of TeX's memory you used:
- 25028 strings out of 492167
- 423666 string characters out of 6125373
- 909759 words of memory out of 5000000
- 28711 multiletter control sequences out of 15000+600000
- 619167 words of font info for 120 fonts, out of 8000000 for 9000
+ 25065 strings out of 492167
+ 424358 string characters out of 6125373
+ 909734 words of memory out of 5000000
+ 28731 multiletter control sequences out of 15000+600000
+ 619463 words of font info for 123 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,12n,100p,1503b,2166s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,12n,100p,1503b,2153s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/texlive/2019/
 texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2019/texmf-dist
@@ -1838,10 +1854,10 @@ st/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
 ype1/public/lm/lmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
 c/lm/lmtt9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtti1
 0.pfb>
-Output written on tesi_triennale.pdf (29 pages, 6495699 bytes).
+Output written on tesi_triennale.pdf (30 pages, 6739848 bytes).
 PDF statistics:
- 611 PDF objects out of 1000 (max. 8388607)
- 552 compressed objects within 6 object streams
- 274 named destinations out of 1000 (max. 500000)
- 27892 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 625 PDF objects out of 1000 (max. 8388607)
+ 563 compressed objects within 6 object streams
+ 282 named destinations out of 1000 (max. 500000)
+ 27902 words of extra memory for PDF output out of 29859 (max. 10000000)
 

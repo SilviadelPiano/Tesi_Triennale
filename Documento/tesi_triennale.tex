@@ -2,7 +2,7 @@
 % !TeX program = pdflatex
 % !TeX spellcheck = it_IT
 
-\documentclass[Lau, binding=0.6cm]{sapthesis}
+\documentclass[Lau, binding=0.6cm, oneside]{sapthesis}
 
 \usepackage{microtype}
 \usepackage[italian]{babel}
@@ -286,7 +286,7 @@ Di seguito si riporta l'elenco delle user stories: descrivono brevemente ma in m
 
 \chapter{Tecnologie e Metodologie utilizzate}
 
-\section{Rails e il paradigma Model-View-Controller}
+\section{Rails e il paradigma Model-View-Controller} \label{mvc}
 
 L’applicazione è stata realizzata con Ruby on Rails, seguendo i principi su cui esso è basato, e varie gemme in esso contenuto.\\
 In particolare, Rails è un framework per lo sviluppo di applicazioni web SaaS (Software as a Service) scritto in Ruby. Esso è stato sviluppato tenendo a mente le più importanti linee guida nella progettazione e programmazione di questo tipo di software, in particolare i principi fondamentali sono due: Don’t Repeat Yourself (non ci deve essere codice ridondante, ma una singola scrittura efficace delle varie funzionalità e caratteristiche) e Conventions Over Configuratons (bisogna specificare delle configurazioni solo nel caso in cui non si seguano quelle raccomandate naturalmente dal framework).
@@ -339,7 +339,7 @@ Per gestire i file (upload, download) ed intergire con questo servizio è stata 
 \subsection{Altre gemme}
 
 Per una più completa trattazione dello sviluppo si è cominciato ad impostare il deploy su Heroku, tramite le gemme \textit{rails\_12factor}(perconfigurare l'ambiente di produzione dell'applicazione), \textit{pg} (in quanto il database di Heroku è basato su PostgreSQL e non SQLite usato per lo sviluppo) e \textit{figaro} (per gestire le chiavi e gli ID segreti negli ambienti di sviluppo e produzione).\\
-Per realizzare il calendario nella Dashboard degli utenti si è usata \textit{simple\_calendar}.\\
+Per realizzare il calendario nella Dashboard degli utenti si è usata \textit{simple\_calendar}, mentre per fare i diagrammi UML deli controller e dei model si è utilizzata \textit{railroady}.\\
 Di seguito è riportato il \textit{Gemfile} con tutte le gemme utilizzate:\\
 
 
@@ -395,30 +395,67 @@ L'entità \textbf{Post} rappresenta le comunicazioni che possono essere fatte su
 Da notare gli attributi facoltativi Link e Deadline. Essi sono stati inseriti per fornire maggiori opzioni al fine di rendere più efficaci le comunicazioni: come insegnante vorrei poter mettere in evidenza un link dove trovare materiale utile oppure una scadenza o una data importante relativa alla comunicazione appena publicata (che sarà segnata sul calendario).\\
 Un Post deve essere associato ad almeno una classe, secondo quanto indicato dalla relazione \textbf{For}, in modo che i suoi membri possano vederlo.
 
-\chapter{Progettazione del sistema (fallo per ultimo, vedi se riesci coi tempi. Vedi quello che ha fatto Jessica}
+\chapter{Progettazione del sistema}
+
+Questa applicazione è basata su tre layer principali: il Data-Layer, l'Application-Layer e il Presentation-Layer. Di seguito sono esposti gli schemi architetturali per una maggiore comprensione del sistema.
 
 \section{Archittura del sistema}
 
 \subsection{Architettura dei Controller}
 
-Schema UML da fare con Draw.io dei controller. Vanno inseriti tutti i metodi
+In questa sezione è riportato lo schema UML dei controller:\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/controllers_UML} 
+	\caption{Schema UML Controllers}
+	\label{fig:schema_UML_controllers}
+\end{figure}
+
+\subsection{Architettura dei Model}
+
+In questa sezione invece è riportato lo schema UML dei model:\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/models_UML} 
+	\caption{Schema UML Models}
+	\label{fig:schema_UML_models}
+\end{figure}
 
 \subsection{Architettura delle View}
 
 Schema UML da fare con Draw.io delle view. 
 
-\subsection{Architettura dei Model}
-
-Schema UML da fare con Draw.io dei model 
-
 \section{Progettazione logica del Data Layer}
 
-Breve introduzione di come Rails gestisce il database (prendila dalla guida su Internet)
-
-Nel rispetto dei vincoli relazionali sopra espressi e tenendo conto delle caratteristiche di Rails, lo schema del database è definito nel file \textit{db/schema.rb} modificato, come espresso in precedenza, dai file contenuti nella cartella \textit{db/migrate/}.
+Come spiegato nella sezione \ref{mvc} Rails è basato sul paradigma Model-View-Controller, quindi nel Data-Layer sono conservati i dati che verranno usati dalle altre componenti delll'applicazione. Tutto ciò è possibile, nell'ambiente di sviluppo, grazie alla gemma \textit{sqlite3}.\\
+Rails offre al programmatore un buon livello di automatizzazione di diversi compiti, tra cui la creazione e la modifica del database: lo schema è conservato nel file \textit{db/schema}, il quale viene modificato tramite altri file detti migration, raccolti nella cartella \textit{db/migrate}.
+In questo modo la probabilità di commettere errori umani (distrazione, battitura, ecc.) è minimizzata e si aumenta l'efficienza del lavoro.
+Di seguito il file \textit{db/schema.rb}:\\
 
 \lstinputlisting[style=Ruby, caption=db/schema.rb, label=lst:dbschema]{code/schema.rb}
 
+Da notare gli attributi \textit{index}: essi indicano delle foreign key, cioè riferimenti ad altre tabelle.
 
+\chapter{Realizzazione del sistema}
+
+\section{Application Layer}
+
+Qualche parola sul file application.controller + tabella con le route principali + codice controller principali (da scegliere)
+
+\section{Presentation Layer}
+
+Spiegazione dell'organizzazione delle view (application.layout), uso di bootstrap e scss + screenshot delle view con 1 riga di descrizione per ognuna
+
+\chapter{Dispiegamento e Validazione}
+
+\section{Installazione}
+
+Passi da git clone a rails server
+
+\section{Test}
+
+Metodo Agile -> Test con cucumber e capybara (mostra i file più importanti) + file rspec con oauth. brakeman e gemsurance per i test di sicurezza. byebug per il debugging durante lo sviluppo 
 
 \end{document}
