@@ -98,7 +98,7 @@ I servizi fondamentali per la didattica offerti sono i seguenti:
 
 In quanto pensata per affiancarsi alle piattaforme già esistenti per la scuola, nell'applicazione vengono memorizzati i dati anagrafici degli utenti, in modo che in futuro i servizi offerti possano essere integrati o usati parallelamente a quelli istituzionali già presenti. Sempre in quest'ottica, gli unici che possono inserire una scuola con le relative classi nel database dell'applicazione sono gli sviluppatori.\\
 
-\section{Dati gestiti dal sistema e principali funzionalità}
+\section{Dati gestiti dal sistema e principali funzionalità} \label{requisiti_db}
 
 Essa prevede tre tipi di utenti: gli studenti (Student), gli insegnanti (Teacher) e i genitori (Parent). Di ogni utente sono memorizzati in un database il nome, il cognome, il codice fiscale, la data e il luogo di nascita, il sesso, la scuola (tra quelle registrate sulla piattaforma dagli sviluppatori), la classe (tra quelle registrate per ciascuna scuola), il ruolo (tra Studente, Insegnante e Genitore). Saranno memorizzati anche una mail e una password con cui si potrà effettuare il login al sito, e nel caso del Genitore, anche il nome e il cognome del figlio iscritto alla scuola. Ad ogni modo, per agevolare l’accesso alla piattaforma sarà fornito anche il servizio di autenticazione tramite Google. Ogni utente ha una propria Dashboard da dove, a seconda del ruolo, può usufruire di diverse funzionalità. Tutti gli utenti possono vedere le informazioni fondamentali associate al proprio account, il calendario e i post contenenti comunicazioni relative alla classe di interesse pubblicate dagli insegnanti; le communicazioni possono avere associata anche una scadenza che verrà mostrata sul calendario. I post saranno memorizzati nell’applicazione. Lo Studente può navigare nell’applicazione per consultare le singole pagine relative alle materie studiate, dove è caricato il materiale di cui può fare il download. L’Insegnante può creare i post; togliere, fare il download e l’upload delle risorse relative alla materia che insegna.\\
 Per semplicità nell’implementazione si assume che ogni Insegnante abbia affidata una sola materia, che ogni Genitore possa avere solo un figlio iscritto alla scuola, che ogni materia sia spiegata da un solo Insegnante e che abbia senso definire una scuola senza classi; tutto ciò considerando la classe frequentata dall’alunno. Tuttavia, lo schema del database è pensato per una maggiore scalabilità, e il codice l'applicazione è stato scritto in modo che essa sia facilmente modificabile o ampliabile. \\
@@ -147,32 +147,32 @@ Di seguito i lo-fi mockup, realizzati con carta e penna, rapprensentano ciò che
 Di seguito si riporta l'elenco delle user stories: descrivono brevemente ma in maniera efficace le azioni che verranno implementate fornendo i servizi precedentemente descritti agli utenti.\\
 
 \begin{enumerate}
-	\item Go to the "SignUp" page from the "Home" page\\
+	\item \textbf{Go to the "SignUp" page from the "Home" page}\\
 			As a user\\
 			So that I can sign up\\
 			Given I'm in the "Home" page\\
 			When I press the button "SignUp"\\
 			Then I should be in the "SignUp" page\\
-	\item SignUpAs a user\\
+	\item \textbf{SignUpAs a user}\\
 			So that I can use the app's services\\
 			Given I'm in the "SignUp" page\\
 			When I fill the form correctly\\
 			and I press the button "SignUp"\\
 			Then I should be registered in the app\\
 			and I should be in the "Home" page\\
-	\item Return to the "Home" page from the "SignUp" page\\
+	\item \textbf{Return to the "Home" page from the "SignUp" page}\\
 			As a user\\
 			So that I can return to the "Home" page without signing up\\
 			Given I’m in the "SignUp" page\\
 			When I press the button "Home"\\
 			Then I should be in the "Home" page\\
-	\item Go to the "LogIn" page from the "Home" page\\
+	\item \textbf{Go to the "LogIn" page from the "Home" page}\\
 			As a user\\
 			So that I can login\\
 			Given I’m in the "Home" page\\
 			When I press the button "Login"\\
 			Then I should be in the "Login" page\\
-	\item LogIn without Google\\
+	\item \textbf{LogIn without Google}\\
 			As a user\\
 			So that I can use the app’s services\\
 			Given I’m in the "LogIn" page\\
@@ -180,106 +180,106 @@ Di seguito si riporta l'elenco delle user stories: descrivono brevemente ma in m
 			When I fill the form correctly\\
 			and I press the button "LogIn"\\
 			Then I should be logged in as a "Parent"and I should be in the "Dashboard\_g" page\\
-	\item LogIn with Google\\
+	\item \textbf{LogIn with Google}\\
 			As a user\\
 			So that I can use the app’s services\\
 			Given I’ve signed up as a "Student" or as a "Teacher"\\
 			I want to log in with Google OAuth\\
-	\item Go to the "Home" page from the "LogIn" page\\
+	\item \textbf{Go to the "Home" page from the "LogIn" page}\\
 			As a user\\
 			So that I can return to the "Home" page without logging in\\
 			Given I’m in the "LogIn" page\\
 			When I press the button "Home"\\
 			Then I should be in the "Home" page\\
-	\item LogOut\\
+	\item \textbf{LogOut}\\
 			As a user\\
 			So that I can stop using the app’s services\\
 			Given I’m in the correct "Dashboard\_*" page\\
 			When I press the button "LogOut"\\
 			Then I should have logged out correctly\\
 			and I should be in the "Home" page\\
-	\item Calendar\\
+	\item \textbf{Calendar}\\
 			As a user\\
 			So that I can know the current date and organize my work properly\\
 			Given I’m in the correct "Dashboard\_*" page\\
 			Then I should see the current date\\
-	\item Posts seen by "Student"As a "Student"\\
+	\item \textbf{Posts seen by "Student"As a "Student"}\\
 			So that I can see the posts all my "Teacher"s made\\
 			Given I’m on the "Dashboard\_s" page\\
 			Then I should see the 10 most recent posts\\
-	\item Go to the "Dashboard\_*" page\\
+	\item \textbf{Go to the "Dashboard\_*" page}\\
 			As a user\\
 			So that I can go to the "Dashboard\_*" whenever I need it\\
 			When I press the button "Dashboard"\\
 			Then I should be in the correct "Dashboard\_*" page\\
-	\item Materie\\
+	\item \textbf{Materie}\\
 			As a "Student"\\
 			So that I can see the subjects teached at school\\
 			Given I’m on the "Dashboard\_s" page\\
 			When I press the button "Materie"\\
 			Then I should be on the "Materie" page\\
-	\item Subject info\\
+	\item \textbf{Subject info}\\
 			As a "Student"\\
 			So that I can have more information about a subject\\
 			Given I’m in the "Materie" page\\
 			When I click che link corresponding to subject *\\
 			Then I should be in the page "Materia*" corresponding to subject *\\
-	\item Go to the "Materie" page from "Materia*" page\\
+	\item \textbf{Go to the "Materie" page from "Materia*" page}\\
 			As a "Student"\\
 			So that I can go to the "Materie" page from the "Materia*" page\\
 			Given I’m in the "Materia*" page\\
 			When I press the button "Materie"\\
 			Then I should be in the "Materie" page\\
-	\item Resources for a specific subject\\
+	\item \textbf{Resources for a specific subject}\\
 			As a "Student"\\
 			So that I can use the resources on subject*\\
 			Given I’m in the "Materia*" page\\
 			and I see the files that are the resources\\
 			When I click the link corresponding to a file\\
 			Then I should be able to download that file\\
-	\item "Teacher"’s posts\\
+	\item \textbf{"Teacher"’s posts}\\
 			As a "Student"\\
 			So that I can have a focus on the specific subject*\\
 			Given I’m in the "Materia*" page\\
 			Then I should see the 5 most recent posts made by the "Teacher" corresponding to that subject\\
-	\item Posts seen by "Teacher"\\
+	\item \textbf{Posts seen by "Teacher"}\\
 			As a "Teacher"\\
 			So that I can see understand the workload my "Student"s have\\
 			Given I’ in the "Dahsboard\_t" page\\
 			Then I should see the 10 most recent posts made by me and the other "Teacher"s who teach my "Student"s\\
-	\item Remove a file\\
+	\item \textbf{Remove a file}\\
 			As a "Teacher"\\
 			So that I can remove files\\
 			Given I’m in the "Dashboard\_t" page\\
 			When I click on the “Cancella” link corresponding to the file I want to remove\\
 			Then the file corresponding to the link I clicked should be removed\\
-	\item Download a file\\
+	\item \textbf{Download a file}\\
 			As a "Teacher"\\
 			So that I can download files\\
 			Given I’m in the "Dashboard\_t" page\\
 			When I clicked on the “Download” link corresponding to the file I want to download\\
 			Then the file corresponding to the link I clicked should be downloaded\\
-	\item Upload a file\\
+	\item \textbf{Upload a file}\\
 			As a user\\
 			So that I can upload a file\\
 			Given I’m in the "CaricoFile" page\\
 			And that I’ve specified what file I want to upload\\
 			When I press the button "Aggiungi"\\
 			Then the file should be uploaded correctly\\
-	\item Go to the "NewPost" page from the "Dashboard\_t" page\\
+	\item \textbf{Go to the "NewPost" page from the "Dashboard\_t" page}\\
 			As a "Teacher"\\
 			So that I can communticate with my "Student"s and assign homework to them\\
 			Given I’m in the "Dashboard\_t" page\\
 			When I press the button "Nuovo Post"\\
 			Then I should be in the "NewPost" page\\
-	\item Publish a post\\
+	\item \textbf{Publish a post}\\
 			As a "Teacher"\\
 			So that I can communicate with my "Student"s and assign homework to them\\
 			Given I’m in the "NewPost" page\\
 			and that I filled the form correctly\\
 			When I press the button "Pubblica"\\
 			Then a new post should be published correctly\\
-	\item Posts seen by a "Parent"\\
+	\item \textbf{Posts seen by a "Parent"}\\
 			As a "Parent"\\
 			So that I can be updated on my son’s scholastic situationGiven I’m in the "Dashboard\_p" page\\
 			Then I should see the posts made by my son’s "Teacher"s\\
@@ -299,11 +299,11 @@ Per l’autenticazione è stata utilizzata la gemma Canard per implementare un m
 Devise è uno strumento molto utile per ogni svilippatore Rails: è organizzata in moduli, per cui è possibile costruire dal più semplice meccanismo di identificazione e verfica, a quello più complesso con diversi servizi aggiuntivi. In questa applicazione sono stati usati soprattutto i seguenti moduli:
 
 \begin{itemize}
-	\item Database Authenticatable: memorizza in maniera sicura e cifrata (grazie al supporto della gemma Bcrypt) la password dell’utente nel databse del sistema
-	\item Registarable: permette agli utenti di registrarsi
-	\item Rememberabe: gestisce le sessioni degli utenti tramite i cookie
-	\item Validatable: convalida le email e le password
-	\item Omniauthable: gestisce autenticazione tramite OAuth (ulteriori dettagli nella sezione successiva).
+	\item \textbf{Database Authenticatable}: memorizza in maniera sicura e cifrata (grazie al supporto della gemma Bcrypt) la password dell’utente nel databse del sistema
+	\item \textbf{Registarable}: permette agli utenti di registrarsi
+	\item \textbf{Rememberabe}: gestisce le sessioni degli utenti tramite i cookie
+	\item \textbf{Validatable}: convalida le email e le password
+	\item \textbf{Omniauthable}: gestisce autenticazione tramite OAuth (ulteriori dettagli nella sezione successiva).
 \end{itemize}
 
 Ulteriori comodità di questa gemma sono le route e le view da essa create automaticamente per tutti i processi relativi all’autenticazione, personalizzabili in maniera opportuna
@@ -313,10 +313,10 @@ Ulteriori comodità di questa gemma sono le route e le view da essa create autom
 OAuth è un protocollo di rete basato su HTTP che consente di delegare l’autenticazione ad una terza entità (quale potrebbe essere Google, Facebook, Twitter...). In esso sono definiti quattro ruoli principali:
 
 \begin{enumerate}
-	\item Utente (Resource Owner): è il possessore dell’account, e deve autorizzare l’accesso alle informazioni contenute in esso e alle risorse protette conservate nel Resource Server
-	\item Client (Consumer): è l’applicazione che vorrebbe accedere alle informazioni e risorse dell’Utente, di cui chiede l’autorizzazione
-	\item Resource Server: il server dove si trovano le risorse protette dell’Utente
-	\item Authorization Server: è il server che si occupa di richiedere all’Utente di autenticarsi (con le credenziali di quest’ultimo) per autorizzare l’accesso alle sue risorse
+	\item \textbf{Utente} (Resource Owner): è il possessore dell’account, e deve autorizzare l’accesso alle informazioni contenute in esso e alle risorse protette conservate nel Resource Server
+	\item \textbf{Client} (Consumer): è l’applicazione che vorrebbe accedere alle informazioni e risorse dell’Utente, di cui chiede l’autorizzazione
+	\item \textbf{Resource Server}: il server dove si trovano le risorse protette dell’Utente
+	\item \textbf{Authorization Server}: è il server che si occupa di richiedere all’Utente di autenticarsi (con le credenziali di quest’ultimo) per autorizzare l’accesso alle sue risorse
 \end{enumerate}
 
 Lo schema di funzionamento è descritto dalla seguente immagine:\\
@@ -354,26 +354,19 @@ Nonostante ciò, in questo lavoro ho voluto tenere fede ai principi di Behavior-
 
 \subsection{Tool per applicare al meglio Agile}
 
-Git -> versioning + link alla repository
+Per applicare al meglio la metologia Agile e lavorare efficientemente ho utilizzato i seguenti strumenti:
 
-VSCode -> editor
-
-Draw.io -> schema ER
-
-Pivotal Tracker -> user stories e traccia del lavoro + link
-
-Travis -> integration test
+\begin{itemize}
+	\item \textbf{Git}: per il versioning control. La repository su cui è conservato il progetto è la seguente: \url{https://github.com/SilviadelPiano/HiSchool.git}
+	\item \textbf{Visual Studio Code} come editor
+	\item \textbf{Draw.io} per la reailzzazione degli schemi ER e UML
+	\item \textbf{Pivotal Tracker} per il tracking degli sprint e per monitorare i progressi e l'andamento del lavoro. Il link alla pagina corrispondente all'applicazione in esame è il seguente: \url{https://www.pivotaltracker.com/n/projects/2393952}
+\end{itemize}
 
 \chapter{Analisi Concettuale del Sistema}
 
 \section{Schema Entità-Relazione}
-
-figaro -> chiavi
-
-elenco delle gemme utilizzate per i test (più dettagli verranno dati nel capitolo dedicato) 
-
-
-Come si può vedere lo schema rappresenta i requisiti descritti nella sezione 1.2 Dati gestiti dal sistema e principali funzionalità.
+In questa sezione viene riportato lo schema ER del databse. Come si può vedere esso rappresenta i requisiti descritti nella sezione \ref{requisiti_db}, assieme ad altri vincoli necessari per lo sviluppo di questa applicazione.
 Sono indicati anche gli identificatori principali.
 
 \begin{figure}[H]
