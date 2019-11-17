@@ -1,0 +1,24 @@
+\BOOKMARK [0][-]{chapter.1}{Raccolta dei requisiti}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Descrizione della realt\340 di interesse}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Dati gestiti dal sistema e principali funzionalit\340}{chapter.1}% 3
+\BOOKMARK [2][-]{subsection.1.2.1}{MockUp e User Stories}{section.1.2}% 4
+\BOOKMARK [2][-]{subsection.1.2.2}{Lo-Fi MockUp}{section.1.2}% 5
+\BOOKMARK [2][-]{subsection.1.2.3}{User Stories}{section.1.2}% 6
+\BOOKMARK [0][-]{chapter.2}{Tecnologie e Metodologie utilizzate}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Rails e il paradigma Model-View-Controller}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.1.1}{Autenticazione locale}{section.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.1.2}{Autenticazione tramite Google OAuth}{section.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.1.3}{Google Drive}{section.2.1}% 11
+\BOOKMARK [2][-]{subsection.2.1.4}{Altre gemme}{section.2.1}% 12
+\BOOKMARK [1][-]{section.2.2}{Agile per lo sviluppo software}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.1}{Tool per applicare al meglio Agile}{section.2.2}% 14
+\BOOKMARK [0][-]{chapter.3}{Analisi Concettuale del Sistema}{}% 15
+\BOOKMARK [1][-]{section.3.1}{Schema Entit\340-Relazione}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.2}{Elenco delle entit\340 e delle relazioni}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.3}{Glossario dei dati}{chapter.3}% 18
+\BOOKMARK [0][-]{chapter.4}{Progettazione del sistema \(fallo per ultimo, vedi se riesci coi tempi. Vedi quello che ha fatto Jessica}{}% 19
+\BOOKMARK [1][-]{section.4.1}{Archittura del sistema}{chapter.4}% 20
+\BOOKMARK [2][-]{subsection.4.1.1}{Architettura dei Controller}{section.4.1}% 21
+\BOOKMARK [2][-]{subsection.4.1.2}{Architettura delle View}{section.4.1}% 22
+\BOOKMARK [2][-]{subsection.4.1.3}{Architettura dei Model}{section.4.1}% 23
+\BOOKMARK [1][-]{section.4.2}{Progettazione logica del Data Layer}{chapter.4}% 24
