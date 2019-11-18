@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.16)  18 NOV 2019 00:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.16)  18 NOV 2019 23:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1327,6 +1327,10 @@ File: listings.cfg 2019/09/10 1.8c listings configuration
 ))
 Package: listings 2019/09/10 1.8c (Carsten Heinz)
 
+(/usr/local/texlive/2019/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
@@ -1336,30 +1340,30 @@ File: lstlang2.sty 2019/09/10 1.8c listings language file
 (./tesi_triennale.aux)
 \openout1 = `tesi_triennale.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 7
-4.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 148.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+48.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 74
-.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 14
+8.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1441,15 +1445,15 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \textsubscript on input line 74.
-LaTeX Info: Redefining \microtypecontext on input line 74.
+LaTeX Info: Redefining \textsubscript on input line 148.
+LaTeX Info: Redefining \microtypecontext on input line 148.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 74.
+LaTeX Info: Redefining \showhyphens on input line 148.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1458,10 +1462,10 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Info: Redefining \it@ocap on input line 74.
-LaTeX Info: Redefining \it@ccap on input line 74.
+LaTeX Info: Redefining \it@ocap on input line 148.
+LaTeX Info: Redefining \it@ccap on input line 148.
 \AtBeginShipoutBox=\box60
-Package hyperref Info: Link coloring OFF on input line 74.
+Package hyperref Info: Link coloring OFF on input line 148.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1471,17 +1475,17 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count322
 )
-LaTeX Info: Redefining \ref on input line 74.
-LaTeX Info: Redefining \pageref on input line 74.
-LaTeX Info: Redefining \nameref on input line 74.
+LaTeX Info: Redefining \ref on input line 148.
+LaTeX Info: Redefining \pageref on input line 148.
+LaTeX Info: Redefining \nameref on input line 148.
 
 (./tesi_triennale.out) (./tesi_triennale.out)
 \@outlinefile=\write3
 \openout3 = `tesi_triennale.out'.
 
 \c@lstlisting=\count323
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 7
-9.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
+53.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1490,13 +1494,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<sapienza-MLred-pos.pdf, id=108, 288.07625pt x 89.33376pt>
+<sapienza-MLred-pos.pdf, id=136, 288.07625pt x 89.33376pt>
 File: sapienza-MLred-pos.pdf Graphic file (type pdf)
 <use sapienza-MLred-pos.pdf>
-Package pdftex.def Info: sapienza-MLred-pos.pdf  used on input line 79.
+Package pdftex.def Info: sapienza-MLred-pos.pdf  used on input line 153.
 (pdftex.def)             Requested size: 142.26378pt x 44.11742pt.
 
-Underfull \hbox (badness 2142) in paragraph at lines 79--79
+Underfull \hbox (badness 2142) in paragraph at lines 153--153
 [][]\T1/lmss/m/n/17.28 HiSchool: svi-lup-po di un'ap-pli-ca-zio-ne per il
  []
 
@@ -1506,47 +1510,47 @@ Underfull \hbox (badness 2142) in paragraph at lines 79--79
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./sapie
 nza-MLred-pos.pdf>]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
-9.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+53.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
 
  []
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
-9.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+53.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
-9.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+53.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-79.
+153.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-79.
+153.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 79.
+(Font)              <10> on input line 153.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 79.
+(Font)              <7> on input line 153.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 79.
+(Font)              <5> on input line 153.
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
 
  []
 
@@ -1554,8 +1558,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.79 
-      [1
+l.153 
+       [1
 
 ] [2
 
@@ -1573,15 +1577,15 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
  [3
 
-]
+] [4]
 Capitolo 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--106
+Underfull \hbox (badness 10000) in paragraph at lines 177--180
 
  []
 
@@ -1589,149 +1593,149 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--106
 
 
 ] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
 
-<images/mockup_1.jpg, id=174, 4047.12pt x 3035.34pt>
+<images/mockup_1.jpg, id=214, 4047.12pt x 3035.34pt>
 File: images/mockup_1.jpg Graphic file (type jpg)
 <use images/mockup_1.jpg>
-Package pdftex.def Info: images/mockup_1.jpg  used on input line 119.
+Package pdftex.def Info: images/mockup_1.jpg  used on input line 193.
 (pdftex.def)             Requested size: 514.80121pt x 386.086pt.
-<images/mockup_2.jpg, id=175, 4047.12pt x 3035.34pt>
+<images/mockup_2.jpg, id=215, 4047.12pt x 3035.34pt>
 File: images/mockup_2.jpg Graphic file (type jpg)
 <use images/mockup_2.jpg>
-Package pdftex.def Info: images/mockup_2.jpg  used on input line 126.
+Package pdftex.def Info: images/mockup_2.jpg  used on input line 200.
 (pdftex.def)             Requested size: 514.80121pt x 386.086pt.
 [3 <./images/mockup_1.JPG>]
-<images/mockup_3.jpg, id=182, 4047.12pt x 3035.34pt>
+<images/mockup_3.jpg, id=221, 4047.12pt x 3035.34pt>
 File: images/mockup_3.jpg Graphic file (type jpg)
 <use images/mockup_3.jpg>
-Package pdftex.def Info: images/mockup_3.jpg  used on input line 133.
+Package pdftex.def Info: images/mockup_3.jpg  used on input line 207.
 (pdftex.def)             Requested size: 514.80121pt x 386.086pt.
  [4 <./images/mockup_2.JPG>]
-<images/mockup_4.jpg, id=188, 3035.34pt x 1226.5825pt>
+<images/mockup_4.jpg, id=227, 3035.34pt x 1226.5825pt>
 File: images/mockup_4.jpg Graphic file (type jpg)
 <use images/mockup_4.jpg>
-Package pdftex.def Info: images/mockup_4.jpg  used on input line 140.
+Package pdftex.def Info: images/mockup_4.jpg  used on input line 214.
 (pdftex.def)             Requested size: 396.0pt x 160.0228pt.
  [5 <./images/mockup_3.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--155
+Underfull \hbox (badness 10000) in paragraph at lines 223--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--162
+Underfull \hbox (badness 10000) in paragraph at lines 229--236
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--168
+Underfull \hbox (badness 10000) in paragraph at lines 236--242
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--174
+Underfull \hbox (badness 10000) in paragraph at lines 242--248
 
  []
 
 [6 <./images/mockup_4.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 174--182
+Underfull \hbox (badness 10000) in paragraph at lines 248--256
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--187
+Underfull \hbox (badness 10000) in paragraph at lines 256--261
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--193
+Underfull \hbox (badness 10000) in paragraph at lines 261--267
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--200
+Underfull \hbox (badness 10000) in paragraph at lines 267--274
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--205
+Underfull \hbox (badness 10000) in paragraph at lines 274--279
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--209
+Underfull \hbox (badness 10000) in paragraph at lines 279--283
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 209--214
+Underfull \hbox (badness 10000) in paragraph at lines 283--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--220
+Underfull \hbox (badness 10000) in paragraph at lines 288--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--226
+Underfull \hbox (badness 10000) in paragraph at lines 294--300
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--232
+Underfull \hbox (badness 10000) in paragraph at lines 300--306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--239
+Underfull \hbox (badness 10000) in paragraph at lines 306--313
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--244
+Underfull \hbox (badness 10000) in paragraph at lines 313--318
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 244--249
+Underfull \hbox (badness 10000) in paragraph at lines 318--323
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--255
+Underfull \hbox (badness 10000) in paragraph at lines 323--329
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--261
+Underfull \hbox (badness 10000) in paragraph at lines 329--335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--268
+Underfull \hbox (badness 10000) in paragraph at lines 335--342
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--274
+Underfull \hbox (badness 10000) in paragraph at lines 342--348
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--281
+Underfull \hbox (badness 10000) in paragraph at lines 348--355
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 281--285
+Underfull \hbox (badness 10000) in paragraph at lines 355--359
 
  []
 
@@ -1740,24 +1744,24 @@ Capitolo 2.
 [11
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 321--322
+Underfull \hbox (badness 10000) in paragraph at lines 395--396
 
  []
 
-<images/oauth.png, id=243, 284.39583pt x 160.93459pt>
+<images/oauth.png, id=282, 284.39583pt x 160.93459pt>
 File: images/oauth.png Graphic file (type png)
 <use images/oauth.png>
-Package pdftex.def Info: images/oauth.png  used on input line 325.
+Package pdftex.def Info: images/oauth.png  used on input line 399.
 (pdftex.def)             Requested size: 356.39758pt x 201.69324pt.
 [12 <./images/oauth.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 341--344
+Underfull \hbox (badness 10000) in paragraph at lines 415--418
 
  []
 
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 346.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-46.
+nput line 420.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
+20.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1766,81 +1770,188 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  (./code/Gemfile
-[13] [14])
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+1.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package microtype Info: Character `texttrademark ' is missing
+(microtype)             in font `TS1/lmtt/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `texttrademark ' is missing
+(microtype)             in font `TS1/lmtt/m/it/9'.
+(microtype)             Ignoring protrusion settings for this character.
+ [13] [14])
+Underfull \hbox (badness 10000) in paragraph at lines 421--422
 
  []
 
 [15] [16]
 Capitolo 3.
-<images/db_HiSchool.png, id=377, 668.4975pt x 563.10374pt>
+<images/db_HiSchool.png, id=419, 668.4975pt x 563.10374pt>
 File: images/db_HiSchool.png Graphic file (type png)
 <use images/db_HiSchool.png>
-Package pdftex.def Info: images/db_HiSchool.png  used on input line 373.
+Package pdftex.def Info: images/db_HiSchool.png  used on input line 447.
 (pdftex.def)             Requested size: 396.0pt x 333.57732pt.
 [17
 
  <./images/db_HiSchool.png>] [18] [19]
 Capitolo 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--407
+Underfull \hbox (badness 10000) in paragraph at lines 480--481
 
  []
 
-<images/controllers_UML.jpg, id=394, 980.66376pt x 946.53625pt>
+<images/controllers_UML.jpg, id=435, 980.66376pt x 946.53625pt>
 File: images/controllers_UML.jpg Graphic file (type jpg)
 <use images/controllers_UML.jpg>
-Package pdftex.def Info: images/controllers_UML.jpg  used on input line 410.
+Package pdftex.def Info: images/controllers_UML.jpg  used on input line 484.
 (pdftex.def)             Requested size: 396.0pt x 382.21854pt.
 [20
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 417--418
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
 
  []
 
-<images/models_UML.jpg, id=399, 1008.76875pt x 517.935pt>
+<images/models_UML.jpg, id=441, 1008.76875pt x 517.935pt>
 File: images/models_UML.jpg Graphic file (type jpg)
 <use images/models_UML.jpg>
-Package pdftex.def Info: images/models_UML.jpg  used on input line 421.
+Package pdftex.def Info: images/models_UML.jpg  used on input line 495.
 (pdftex.def)             Requested size: 396.0pt x 203.32153pt.
 [21 <./images/controllers_UML.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 432--436
+<images/UML_views.png, id=448, 798.985pt x 704.6325pt>
+File: images/UML_views.png Graphic file (type png)
+<use images/UML_views.png>
+Package pdftex.def Info: images/UML_views.png  used on input line 506.
+(pdftex.def)             Requested size: 396.0pt x 349.24037pt.
+ [22 <./images/models_UML.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 513--517
 
  []
 
-(./code/schema.rb [22 <./images/models_UML.jpg>] [23]) [24]
+(./code/schema.rb [23 <./images/UML_views.png>] [24]) [25]
 Capitolo 5.
-[25
+(./code/application.html.haml
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 8.
+ [26
 
-]
+]) (./code/application.css.scss [27])
+<images/home_page.jpg, id=636, 1373.13pt x 633.36626pt>
+File: images/home_page.jpg Graphic file (type jpg)
+<use images/home_page.jpg>
+Package pdftex.def Info: images/home_page.jpg  used on input line 547.
+(pdftex.def)             Requested size: 396.0pt x 182.65675pt.
+ [28]
+<images/registration_page.jpg, id=682, 1102.1175pt x 622.325pt>
+File: images/registration_page.jpg Graphic file (type jpg)
+<use images/registration_page.jpg>
+Package pdftex.def Info: images/registration_page.jpg  used on input line 556.
+(pdftex.def)             Requested size: 396.0pt x 223.60951pt.
+<images/school_p_form.jpg, id=686, 1057.9525pt x 423.5825pt>
+File: images/school_p_form.jpg Graphic file (type jpg)
+<use images/school_p_form.jpg>
+Package pdftex.def Info: images/school_p_form.jpg  used on input line 566.
+(pdftex.def)             Requested size: 396.0pt x 158.54573pt.
+
+[29 <./images/home_page.jpg> <./images/registration_page.jpg>]
+<images/school_s_form.jpg, id=695, 1088.065pt x 406.51875pt>
+File: images/school_s_form.jpg Graphic file (type jpg)
+<use images/school_s_form.jpg>
+Package pdftex.def Info: images/school_s_form.jpg  used on input line 573.
+(pdftex.def)             Requested size: 396.0pt x 147.9532pt.
+<images/school_t_form.jpg, id=696, 1047.915pt x 419.5675pt>
+File: images/school_t_form.jpg Graphic file (type jpg)
+<use images/school_t_form.jpg>
+Package pdftex.def Info: images/school_t_form.jpg  used on input line 580.
+(pdftex.def)             Requested size: 396.0pt x 158.54741pt.
+ [30 <./images/school_p_form.jpg> <./images/school_s_form.jpg> <./images/school
+_t_form.jpg>]
+<images/p_dashboard.jpg, id=704, 1346.02875pt x 787.94376pt>
+File: images/p_dashboard.jpg Graphic file (type jpg)
+<use images/p_dashboard.jpg>
+Package pdftex.def Info: images/p_dashboard.jpg  used on input line 590.
+(pdftex.def)             Requested size: 396.0pt x 231.8162pt.
+<images/s_dashboard.jpg, id=705, 1450.41875pt x 686.565pt>
+File: images/s_dashboard.jpg Graphic file (type jpg)
+<use images/s_dashboard.jpg>
+Package pdftex.def Info: images/s_dashboard.jpg  used on input line 597.
+(pdftex.def)             Requested size: 396.0pt x 187.4493pt.
+<images/materie_page.jpg, id=707, 1279.78125pt x 487.8225pt>
+File: images/materie_page.jpg Graphic file (type jpg)
+<use images/materie_page.jpg>
+Package pdftex.def Info: images/materie_page.jpg  used on input line 606.
+(pdftex.def)             Requested size: 396.0pt x 150.948pt.
+
+[31 <./images/p_dashboard.jpg> <./images/s_dashboard.jpg>]
+<images/materia_page.jpg, id=716, 1276.77pt x 521.95pt>
+File: images/materia_page.jpg Graphic file (type jpg)
+<use images/materia_page.jpg>
+Package pdftex.def Info: images/materia_page.jpg  used on input line 615.
+(pdftex.def)             Requested size: 396.0pt x 161.88246pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 620--621
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 622--624
+
+ []
+
+<images/t_dashboard.jpg, id=719, 1202.4925pt x 788.9475pt>
+File: images/t_dashboard.jpg Graphic file (type jpg)
+<use images/t_dashboard.jpg>
+Package pdftex.def Info: images/t_dashboard.jpg  used on input line 627.
+(pdftex.def)             Requested size: 396.0pt x 259.81175pt.
+[32 <./images/materie_page.jpg> <./images/materia_page.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 632--633
+
+ []
+
+<images/new_post.jpg, id=728, 1237.62375pt x 727.71875pt>
+File: images/new_post.jpg Graphic file (type jpg)
+<use images/new_post.jpg>
+Package pdftex.def Info: images/new_post.jpg  used on input line 636.
+(pdftex.def)             Requested size: 396.0pt x 232.84145pt.
+[33 <./images/t_dashboard.jpg> <./images/new_post.jpg>]
+<images/login.jpg, id=738, 1283.79625pt x 451.6875pt>
+File: images/login.jpg Graphic file (type jpg)
+<use images/login.jpg>
+Package pdftex.def Info: images/login.jpg  used on input line 646.
+(pdftex.def)             Requested size: 396.0pt x 139.32556pt.
+<images/google_oauth.jpg, id=739, 589.20125pt x 619.31375pt>
+File: images/google_oauth.jpg Graphic file (type jpg)
+<use images/google_oauth.jpg>
+Package pdftex.def Info: images/google_oauth.jpg  used on input line 653.
+(pdftex.def)             Requested size: 396.0pt x 416.24216pt.
+ [34 <./images/login.jpg>] [35 <./images/google_oauth.jpg>]
 Capitolo 6.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 461.
-[26
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 669.
+[36
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 461.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 669.
  (./tesi_triennale.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 461.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 461.
-
-
-Package rerunfilecheck Warning: File `tesi_triennale.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `tesi_triennale.out':
-(rerunfilecheck)             Before: E356AFFA3384F40BEE2E552D8B444B09;1957
-(rerunfilecheck)             After:  6E6989B079A3921FFEC883D5F1DEFD5A;2321.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 669.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 669.
+Package rerunfilecheck Info: File `tesi_triennale.out' has not changed.
+(rerunfilecheck)             Checksum: FF75E4E91B5D3A5DE8B79135AE3C58D0;2400.
  ) 
 Here is how much of TeX's memory you used:
- 25065 strings out of 492167
- 424358 string characters out of 6125373
- 909734 words of memory out of 5000000
- 28731 multiletter control sequences out of 15000+600000
- 619463 words of font info for 123 fonts, out of 8000000 for 9000
+ 25599 strings out of 492167
+ 433182 string characters out of 6125373
+ 940381 words of memory out of 5000000
+ 29088 multiletter control sequences out of 15000+600000
+ 621386 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,12n,100p,1503b,2153s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,12n,100p,1503b,2220s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/texlive/2019/
 texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2019/texmf-dist
@@ -1848,16 +1959,17 @@ texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2019/texmf-dist
 e1/public/lm/lmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/l
 m/lmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr7.pfb><
 /usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/t
-exlive/2019/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/201
-9/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2019/texmf-di
-st/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
-ype1/public/lm/lmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
-c/lm/lmtt9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtti1
-0.pfb>
-Output written on tesi_triennale.pdf (30 pages, 6739848 bytes).
+exlive/2019/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2019/
+texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2019/texmf-dist
+/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
+e1/public/lm/lmss17.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/
+lm/lmtk10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt10.
+pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/l
+ocal/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
+Output written on tesi_triennale.pdf (41 pages, 8134572 bytes).
 PDF statistics:
- 625 PDF objects out of 1000 (max. 8388607)
- 563 compressed objects within 6 object streams
- 282 named destinations out of 1000 (max. 500000)
- 27902 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 892 PDF objects out of 1000 (max. 8388607)
+ 800 compressed objects within 8 object streams
+ 411 named destinations out of 1000 (max. 500000)
+ 29564 words of extra memory for PDF output out of 29859 (max. 10000000)
 

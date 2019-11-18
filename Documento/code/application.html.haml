@@ -1,0 +1,30 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width", :name => "viewport"}/
+    %meta{:content => "height=device-height", :name => "viewport"}/
+    %title HiSchool
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    #main-container
+      .nav.navbar-default.navbar-fixed-top
+        .container
+          .navbar-header
+            = image_tag("HiSchoolLogo.png")
+          %ul.nav.navbar-nav.navbar-right
+            = yield :nav_top
+      .container-fluid
+        .row
+          .col-xs-12.col-md-4.center-block
+            = yield :left_col
+          .col-xs-12.col-md-4.center-block
+            = yield :center_col
+          .col-xs-12.col-md-4.center-block
+            = yield :right_col
+      .nav.navbar-default.navbar-fixed-bottom
+        .container
+          %ul.nav.navbar-nav.navbar-left
+            = yield :nav_bottom

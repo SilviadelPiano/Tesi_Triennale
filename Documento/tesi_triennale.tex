@@ -23,13 +23,25 @@
 \usepackage{xtab}
 \usepackage{longtable}
 \usepackage{listings}
+\usepackage{upquote}
 %\usepackage{supertabular}
 
 %\usepackage[procnames]{listings}
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{grey}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
-\definecolor{light-gray}{gray}{0.25}
+\definecolor{light-gray}{gray}{0.25}\definecolor{lightgray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{darkgray}{rgb}{0.4, 0.4, 0.4}
+%\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{editorGray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{editorOcher}{rgb}{1, 0.5, 0} % #FF7F00 -> rgb(239, 169, 0)
+\definecolor{editorGreen}{rgb}{0, 0.5, 0} % #007C00 -> rgb(0, 124, 0)
+\definecolor{orange}{rgb}{1,0.45,0.13}		
+\definecolor{olive}{rgb}{0.17,0.59,0.20}
+\definecolor{brown}{rgb}{0.69,0.31,0.31}
+\definecolor{purple}{rgb}{0.38,0.18,0.81}
+\definecolor{lightblue}{rgb}{0.1,0.57,0.7}
+\definecolor{lightred}{rgb}{1,0.4,0.5}
 
 \lstdefinestyle{Ruby} {
 	aboveskip=3mm,
@@ -52,7 +64,69 @@
 	%procnamestyle=\color{red},
 }
 
+% CSS
+\lstdefinelanguage{CSS}{
+  keywords={color,background-image:,margin,padding,font,weight,display,position,top,left,right,bottom,list,style,border,size,white,space,min,width:, transition:, transform:, transition-property, transition-duration, transition-timing-function, overflow:, height:, max, margin:, padding:, background, color:, top:, left:, bottom:, size:},	
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
+  alsoletter={:},
+  alsodigit={-}
+}
+
+%HAML
+\lstdefinelanguage{HAML}{
+	keywords={\%html, \%meta, \%title, \%body, csrf_meta_tags, stylesheet_link_tag, javascript_include_tag, \#main-container, .nav.navbar-default.navbar-fixed-top, .container, .navbar-header, image_tag, \%ul.nav.navbar-nav.navbar-right, yield, .container-fluid, .row, .col-xs-12.col-md-4.center-block, .nav.navbar-default.navbar-fixed-bottom, \%ul.nav.navbar-nav.navbar-left},
+	sensitive=true,
+	morestring=[b]',
+  	morestring=[b]"
+}
+
+\lstdefinestyle{CSS} {
+% General design
+%  backgroundcolor=\color{editorGray},
+  basicstyle={\footnotesize\ttfamily},   
+  frame=b,
+  % line-numbers
+  xleftmargin={0.75cm},
+  numbers=left,
+  stepnumber=1,
+  firstnumber=1,
+  numberfirstline=true,	
+  % Code design
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywordstyle=\color{editorGreen}\bfseries,
+  stringstyle=\color{editorOcher}\ttfamily,
+  commentstyle=\color{olive}\ttfamily,
+  % Code
+  alsodigit={.:;},	
+  tabsize=2,
+  showtabs=false,
+  showspaces=false,
+  showstringspaces=false,
+  extendedchars=true,
+  breaklines=true,
+}
+
 \lstset{language=Ruby, , captionpos=b, frame=single}
+\lstset{literate=
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {Ã}{{\~A}}1 {ã}{{\~a}}1 {Õ}{{\~O}}1 {õ}{{\~o}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {€}{{\euro}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1
+  {»}{{\guillemotright}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1
+}
 
 \definecolor{gray}{gray}{0.4}
 \newcommand{\bs}{\textbackslash}
@@ -425,7 +499,14 @@ In questa sezione invece è riportato lo schema UML dei model:\\
 
 \subsection{Architettura delle View}
 
-Schema UML da fare con Draw.io delle view. 
+In questa sezione è possibile visionare il diagramma UML relativo alle views. (Figura \ref{fig:UML_views}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/UML_views} 
+	\caption{Schema UML Views}
+	\label{fig:UML_views}
+\end{figure}
 
 \section{Progettazione logica del Data Layer}
 
@@ -447,6 +528,133 @@ Qualche parola sul file application.controller + tabella con le route principali
 \section{Presentation Layer}
 
 Spiegazione dell'organizzazione delle view (application.layout), uso di bootstrap e scss + screenshot delle view con 1 riga di descrizione per ognuna
+
+Il Presentation Layer è costituito dall'insieme delle view che vengono presentate all'utente. Esse sono state realizzate mediante il linguaggio HAML, e si trovano nella cartella \textit{views}. Per lo styling sono stati usati i file SCSS definiti nella cartella \textit{assets/stylesheets}. Nella cartella \textit{assets/images} si trovano le immagini rese nel browser (in questo caso il logo HiSchool).\\
+Nel rispetto del principio Don't Repeat Yoursel, sono stati creati i file \textit{views/layouts/application.html.haml} (Figura \ref{lst:application_layout}) e \textit{assets/stylesheets/application.css.scss} (Figura \ref{lst:application_css}, che essendo ereditati dall'intera applicazione forniscono lo styling di base generale.\\
+Inoltre si è fatto spesso uso di partials.
+
+\lstset{language=HAML, , captionpos=b, frame=single}
+\lstinputlisting[language=HAML, style=CSS, caption=views/layouts/application.html.haml, label=lst:application_layout]{code/application.html.haml}
+
+\lstset{language=CSS, , captionpos=b, frame=single}
+\lstinputlisting[language=CSS, style=CSS, caption=assets/stylesheets/application.css.scss, label=lst:application_css]{code/application.css.scss}
+
+\subsection{Aspetto dell'applicazione}
+In questa sezione verranno presentate le view dell'applicazione, le dimensioni sono state riadattate per una migliore impaginazione. Nella figura \ref{fig:home_page} si può vedere la schermata che accoglie l'utente avviata la piattaforma:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/home_page} 
+	\caption{views/home/index.html.haml}
+	\label{fig:home_page}
+\end{figure}
+
+Una volta premuto il bottone \textbf{Registrati} ci si ritrova nella pagina di registrazione, mostrata nella figura \ref{fig:registration_page}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/registration_page} 
+	\caption{views/home/registrations/new.html.haml}
+	\label{fig:registration_page}
+\end{figure}
+
+A seconda del ruolo selezionato, se tutti i campi della form sono stati compilati correttamente, premendo il bottone \textbf{Registrati} si arriva a pagine dall'aspetto diverso. Esse sono però definite tutte nello stesso file di codice: \textit{views/home/school\_class\_new.html.haml}. 
+Se viene selezionato il ruolo di \textit{Genitore} si arriverà alla pagina in figura \ref{fig:school_p_form}, se si è selezionato \textit{Studente}      a quella in figura \ref{fig:school_s_form}, e infine se si è selezionato \textit{Insegnante} ci si ritroverà una schermata come quella in figura \ref{fig:school_t_form}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/school_p_form} 
+	\caption{views/home/school\_class\_new.html.haml}
+	\label{fig:school_p_form}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/school_s_form} 
+	\caption{views/home/school\_class\_new.html.haml}
+	\label{fig:school_s_form}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/school_t_form} 
+	\caption{views/home/school\_class\_new.html.haml}
+	\label{fig:school_t_form}
+\end{figure}
+
+In tutti e tre i casi, una volta compilati gli ultimi campi e premuto il bottone \textbf{Completa la registrazione}, l'utente risulta registrato e verrà reindirizzato alla sua dashboard. Anch'essa è differente a seconda dei ruoli, ed è ottenuta combinanto diverse partial (\textit{views/dashboard/\_common.html.ham} e \textit{views/dashboard/\_posts.html.haml}) in diversi file. Nella figura \ref{fig:p_dashboard} è mostrata quella per il Genitore, nella \ref{fig:s_dashboard} quella per lo Studente e nella \ref{fig:t_dashboard} quella per l'Insegnante.\\
+Si noti come in tutte le dashboard sono presenti i dati fondamentali dell'utente, il calendario (dove è segnato in verde accesso il giorno corrente e in giallo le scadenze delle comunicazioni) e i post relativi alla classe di interesse. In tutte è inoltre presente il bottone \textbf{Logout} per tornare alla pagina iniziale e terminare la sessione.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/p_dashboard} 
+	\caption{views/dashboard/parent\_dashboard.html.haml}
+	\label{fig:p_dashboard}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/s_dashboard} 
+	\caption{views/dashboard/student\_dashboard.html.haml}
+	\label{fig:s_dashboard}
+\end{figure}
+
+Nella pagina della Studente è presente anche il bottone \textbf{Materie}. Cliccandolo si potrà accedere ad un'altra schermata dove verranno visualizzati i link alle pagine corrispondenti alle materie insegnate dai professori registrati. (Figura \ref{fig:materie_page}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/materie_page} 
+	\caption{views/subjects/index.html.haml}
+	\label{fig:materie_page}
+\end{figure}
+
+Se si clicca sul bottone \textbf{Dashboard} si ritorna nell'omonima pagina, mentre se si segue uno dei link riguardanti le materie, per esempio \textit{Italiano}, ci si ritrova alla pagina dedicata, mostrata in figura \ref{fig:materia_page}. In essa si potrà trovare il materiale presente su Google Drive ed i post riguardanti solo quella specifica disciplina.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/materia_page} 
+	\caption{views/subjects/show.html.haml}
+	\label{fig:materia_page}
+\end{figure}
+
+Cliccando sul bottone \textbf{Materie} si ritorna alla pagina in figura \ref{fig:materie_page}.\\
+
+Nella dashboard dell'Insegnante è presente, sulla sinistra, anche il materiale caricato su Google Drive per gli studenti, con i relativi link per la cancellazione ed il download. In basso a destra invece vi è la form per farne l'upload. 
+Seguendo inoltre il bottone \textbf{Nuovo Post} si avrà a disposizione la pagina con la form che permetterà pubblicare, per l'appunto, un nuovo post. (Figura \ref{fig:nuovo_post}).\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/t_dashboard} 
+	\caption{views/dashboard/teacher\_dashboard.html.haml}
+	\label{fig:t_dashboard}
+\end{figure}
+
+Cliccando il tasto \textbf{Pubblica}, previa adeguata compilazione dei campi, verrà creata e pubblicata la comunicazione, e si sarà reindirizzati alla dashboard.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/new_post} 
+	\caption{views/posts/new.html.haml}
+	\label{fig:nuovo_post}
+\end{figure}
+
+Infine, cliccando il bottone \textbf{Login} dalla pagina iniziale (figura \ref{fig:home_page}) si andrà a finire nell'omonima pagina (figura \ref{fig:login}). Si può scegliere se compilare i campi ed accedere con le credenziali locali (quelle impostate al momento della registrazione) oppure se accedere tramite Google sfruttando i servizi OAuht, venendo reindirizzati alla pagina corrispondente (figura \ref{fig:google_oauth}). 
+A login effettuato ci si ritroverà sulla dashboard corrispondente al proprio ruolo.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/login} 
+	\caption{views/users/sessions/new.html.haml}
+	\label{fig:login}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/google_oauth} 
+	\caption{Login con Google}
+	\label{fig:google_oauth}
+\end{figure}
+
 
 \chapter{Dispiegamento e Validazione}
 

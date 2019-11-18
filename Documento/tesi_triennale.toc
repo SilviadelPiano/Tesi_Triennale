@@ -25,10 +25,11 @@
 \contentsline {subsection}{\numberline {4.1.1}Architettura dei Controller}{20}{subsection.4.1.1}% 
 \contentsline {subsection}{\numberline {4.1.2}Architettura dei Model}{21}{subsection.4.1.2}% 
 \contentsline {subsection}{\numberline {4.1.3}Architettura delle View}{22}{subsection.4.1.3}% 
-\contentsline {section}{\numberline {4.2}Progettazione logica del Data Layer}{22}{section.4.2}% 
-\contentsline {chapter}{\numberline {5}Realizzazione del sistema}{25}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Application Layer}{25}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}Presentation Layer}{25}{section.5.2}% 
-\contentsline {chapter}{\numberline {6}Dispiegamento e Validazione}{26}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}Installazione}{26}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}Test}{26}{section.6.2}% 
+\contentsline {section}{\numberline {4.2}Progettazione logica del Data Layer}{23}{section.4.2}% 
+\contentsline {chapter}{\numberline {5}Realizzazione del sistema}{26}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Application Layer}{26}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Presentation Layer}{26}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}Aspetto dell'applicazione}{28}{subsection.5.2.1}% 
+\contentsline {chapter}{\numberline {6}Dispiegamento e Validazione}{36}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Installazione}{36}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Test}{36}{section.6.2}% 
