@@ -51,7 +51,7 @@
 	basicstyle={\footnotesize\ttfamily},
 	numberstyle={\tiny},
 	numbers=left,
-	keywordstyle=\color{blue}
+	keywordstyle=\color{blue},
 	commentstyle=\color{dkgreen},
 	stringstyle=\color{mauve},
 	breaklines=true,
@@ -111,6 +111,7 @@
 }
 
 \lstset{language=Ruby, , captionpos=b, frame=single}
+
 \lstset{literate=
   {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
   {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
@@ -363,18 +364,18 @@ Di seguito si riporta l'elenco delle user stories: descrivono brevemente ma in m
 \section{Rails e il paradigma Model-View-Controller} \label{mvc}
 
 L’applicazione è stata realizzata con Ruby on Rails, seguendo i principi su cui esso è basato, e varie gemme in esso contenuto.\\
-In particolare, Rails è un framework per lo sviluppo di applicazioni web SaaS (Software as a Service) scritto in Ruby. Esso è stato sviluppato tenendo a mente le più importanti linee guida nella progettazione e programmazione di questo tipo di software, in particolare i principi fondamentali sono due: Don’t Repeat Yourself (non ci deve essere codice ridondante, ma una singola scrittura efficace delle varie funzionalità e caratteristiche) e Conventions Over Configuratons (bisogna specificare delle configurazioni solo nel caso in cui non si seguano quelle raccomandate naturalmente dal framework).
+In particolare, Rails è un framework per lo sviluppo di applicazioni web SaaS (Software as a Service) scritto in Ruby, ed è stato sviluppato tenendo a mente le più importanti linee guida nella progettazione e programmazione di questo tipo di software. Due dei principi fondamentali sono: Don’t Repeat Yourself (non ci deve essere codice ridondante, ma una singola scrittura efficace delle varie funzionalità e caratteristiche) e Conventions Over Configuratons (bisogna specificare delle configurazioni solo nel caso in cui non si seguano quelle raccomandate naturalmente dal framework).
 Tutto ciò è implementato col paradigma Model-View-Controller: i modelli servono per interagire con i dati del sistema, le view li visualizzano in maniera appropriata rendendo possibile l’interazione con gli utenti, mentre i controller ricevono i comandi di questi (solitamente attraverso le view e il browser) e li eseguono.
 
 \subsection{Autenticazione locale}
 
-Per l’autenticazione è stata utilizzata la gemma Canard per implementare un modello di Role-Based Authentication (ulteriori dettagli nella sezione TODO) insieme alla gemma Devise.
+Per i processi di autenticazione e autorizzazione è stata utilizzata la gemma Canard, per implementare un modello di Role-Based Access Control, insieme alla gemma Devise.
 Devise è uno strumento molto utile per ogni svilippatore Rails: è organizzata in moduli, per cui è possibile costruire dal più semplice meccanismo di identificazione e verfica, a quello più complesso con diversi servizi aggiuntivi. In questa applicazione sono stati usati soprattutto i seguenti moduli:
 
 \begin{itemize}
-	\item \textbf{Database Authenticatable}: memorizza in maniera sicura e cifrata (grazie al supporto della gemma Bcrypt) la password dell’utente nel databse del sistema
+	\item \textbf{Database Authenticatable}: memorizza in maniera sicura e cifrata (grazie al supporto della gemma Bcrypt) la password dell’utente nel database del sistema
 	\item \textbf{Registarable}: permette agli utenti di registrarsi
-	\item \textbf{Rememberabe}: gestisce le sessioni degli utenti tramite i cookie
+	\item \textbf{Rememberable}: gestisce le sessioni degli utenti tramite i cookie
 	\item \textbf{Validatable}: convalida le email e le password
 	\item \textbf{Omniauthable}: gestisce autenticazione tramite OAuth (ulteriori dettagli nella sezione successiva).
 \end{itemize}
@@ -406,13 +407,13 @@ Per implementare tutto ciò ci si è serviti, come accennato in precedenza, del 
 
 \subsection{Google Drive}
 
-Come affermato in precedenza, per memorizzare le risorse a disposizione degli studenti si è usato Google Drive.\\
+Per memorizzare le risorse a disposizione degli studenti si è usato Google Drive.\\
 La prima cosa da fare è stato associare all'applicazione un service account dalla Google API Console. Un service account è un particolare account Google che rappresenta un' entità non umana che necessita di accedere a delle risorse protette. Di conseguenza all'applicazione in esame sono stati associate una email, una password e un ID per Google.\\
-Per gestire i file (upload, download) ed intergire con questo servizio è stata usata la gemma \textit{google-api-client}.
+Per gestire i file (upload, download) ed interagire con questo servizio è stata usata la gemma \textit{google-api-client}.
 
 \subsection{Altre gemme}
 
-Per una più completa trattazione dello sviluppo si è cominciato ad impostare il deploy su Heroku, tramite le gemme \textit{rails\_12factor}(perconfigurare l'ambiente di produzione dell'applicazione), \textit{pg} (in quanto il database di Heroku è basato su PostgreSQL e non SQLite usato per lo sviluppo) e \textit{figaro} (per gestire le chiavi e gli ID segreti negli ambienti di sviluppo e produzione).\\
+Per una più completa trattazione dello sviluppo si è cominciato ad impostare il deploy su Heroku, tramite le gemme \textit{rails\_12factor}(per configurare l'ambiente di produzione dell'applicazione), \textit{pg} (in quanto il database di Heroku è basato su PostgreSQL e non su SQLite usato per lo sviluppo) e \textit{figaro} (per gestire le chiavi e gli ID segreti negli ambienti di sviluppo e produzione).\\
 Per realizzare il calendario nella Dashboard degli utenti si è usata \textit{simple\_calendar}, mentre per fare i diagrammi UML deli controller e dei model si è utilizzata \textit{railroady}.\\
 Di seguito è riportato il \textit{Gemfile} con tutte le gemme utilizzate:\\
 
@@ -423,7 +424,7 @@ Una discussione degli strumenti usati per i test si può trovare nella sezione T
 \section{Agile per lo sviluppo software}
 
 Nel realizzare questa applicazione mi sono ispirata alla metodologia Agile. Essa è in realtà pensata per gruppi di persone che lavorano insieme allo stesso software: le interazione tra i vari membri di un singolo team e tra i responsabili di questi hanno un'enorme importanza, e sono il vero punto di forza di questa metodologia, insieme al contatto con il committente.\\
-Nonostante ciò, in questo lavoro ho voluto tenere fede ai principi di Behavior-Driven Design e Test-Driven Development. Di conseguenza, prima dello sviluppo del codice, nella fase di progettazine, sono stati realizzati i lo-fi mockup e le user stories per fare chiarezza su cosa doveva essere realizzato. Successivamente, durante lo sviluppo, per ogni user story veniva scritto un test e il codice per soddisfarlo, in modo che tutto fosse fatto in modo corretto. Ponendo l'attenzione sulla qualità e sui contenuti da subito si sono evitati lunghi e tortuosi processi di debug, oltre all'implementazione di funzionalità inutili o non richieste.
+Nonostante ciò, in questo lavoro ho voluto tenere fede ai principi di Behavior-Driven Design e Test-Driven Development. Di conseguenza, prima dello sviluppo del codice, nella fase di progettazione, sono stati realizzati i lo-fi mockup e le user stories per fare chiarezza su cosa doveva essere realizzato. Successivamente, durante lo sviluppo, per ogni user story veniva scritto un test e il codice per soddisfarlo, in modo che tutto fosse fatto in modo corretto. Ponendo l'attenzione sulla qualità e sui contenuti da subito si sono evitati lunghi e tortuosi processi di debug, oltre all'implementazione di funzionalità inutili o non richieste.
 
 \subsection{Tool per applicare al meglio Agile}
 
@@ -455,7 +456,7 @@ In questa sezione verranno presentate in maniera più approfondita le varie enti
 \subsection{Generalizzazione User}
 \textbf{User} è l'entità che rappresenta l'utente che andrà ad usufruire dell'applicazione: si può notare infatti la generalizzazione che differenzia i tre tipi di utilizzatori che si avranno.\\
 \textbf{Parent} e \textbf{Student}, cioè le entità che rappresentano il genitore e lo studente, sono legate dalla relazione \textbf{ChildOf}: essa esprime la parentela tra lo studente iscritto e il genitore (potrebbe essere anche il tutore legale del ragazzo in mancanza di parenti più stretti) dello stesso. Un Parent per registrarsi sulla piattaforma deve avere almeno un figlio Student registrato su di essa. D'altro canto, uno Student non deve per forza avere un Parent ad esso associato per registrarsi, ma può averne al massimo 2 associati ad esso.\\
-Durante la ristrutturazione Parent, Student e Teacher sono state accorpate a User per generare un'unica entità omonima, dove i vari ruoli sono distinti da un flag, tramite l'ausilio della gemma Canard.
+Durante la ristrutturazione Parent, Student e Teacher sono state accorpate a User per generare un'unica entità omonima, dove i vari ruoli sono distinti da una bitmask, tramite l'ausilio della gemma Canard.
 
 \subsection{Entità School e Class}
 L'entità \textbf{School} rappresenta la scuola registrata nel database dell'applicazione, ed è legata a \textbf{Class} tramite la relazione \textbf{Has}. Class è infatti identificata dal proprio nome e dalla Scuola a cui appartiene. Per esempio, la classe 1\ap{a} del liceo scientifico sarà presente in tutti i licei scientifici, ed almeno in 1, altrimenti non esisterebbe, da qui l'associazione 1...n. Una Scuola deve avere almeno una classe.\\
@@ -471,13 +472,13 @@ Un Post deve essere associato ad almeno una classe, secondo quanto indicato dall
 
 \chapter{Progettazione del sistema}
 
-Questa applicazione è basata su tre layer principali: il Data-Layer, l'Application-Layer e il Presentation-Layer. Di seguito sono esposti gli schemi architetturali per una maggiore comprensione del sistema.
+Questa applicazione è basata su tre layer principali: il Data Layer, l'Application Layer e il Presentation Layer. Di seguito sono esposti gli schemi architetturali per una maggiore comprensione del sistema.
 
 \section{Archittura del sistema}
 
 \subsection{Architettura dei Controller}
 
-In questa sezione è riportato lo schema UML dei controller:\\
+In questa sezione è riportato lo schema UML dei controller. (Figura \ref{fig:schema_UML_controllers}).\\
 
 \begin{figure}[H]
 	\centering
@@ -488,7 +489,7 @@ In questa sezione è riportato lo schema UML dei controller:\\
 
 \subsection{Architettura dei Model}
 
-In questa sezione invece è riportato lo schema UML dei model:\\
+In questa sezione invece è riportato lo schema UML dei model. (Figura \ref{fig:schema_UML_models}).\\
 
 \begin{figure}[H]
 	\centering
@@ -499,7 +500,7 @@ In questa sezione invece è riportato lo schema UML dei model:\\
 
 \subsection{Architettura delle View}
 
-In questa sezione è possibile visionare il diagramma UML relativo alle views. (Figura \ref{fig:UML_views}).
+In questa sezione infine è possibile visionare il diagramma UML relativo alle views. (Figura \ref{fig:UML_views}).
 
 \begin{figure}[H]
 	\centering
@@ -511,11 +512,11 @@ In questa sezione è possibile visionare il diagramma UML relativo alle views. (
 \section{Progettazione logica del Data Layer}
 
 Come spiegato nella sezione \ref{mvc} Rails è basato sul paradigma Model-View-Controller, quindi nel Data-Layer sono conservati i dati che verranno usati dalle altre componenti delll'applicazione. Tutto ciò è possibile, nell'ambiente di sviluppo, grazie alla gemma \textit{sqlite3}.\\
-Rails offre al programmatore un buon livello di automatizzazione di diversi compiti, tra cui la creazione e la modifica del database: lo schema è conservato nel file \textit{db/schema}, il quale viene modificato tramite altri file detti migration, raccolti nella cartella \textit{db/migrate}.
+Rails offre al programmatore un buon livello di automatizzazione di diversi compiti, tra cui la creazione e la modifica del database: lo schema è conservato nel file \textit{app/db/schema}, il quale viene modificato tramite altri file detti migration, raccolti nella cartella \textit{app/db/migrate}.
 In questo modo la probabilità di commettere errori umani (distrazione, battitura, ecc.) è minimizzata e si aumenta l'efficienza del lavoro.
-Di seguito il file \textit{db/schema.rb}:\\
+Di seguito il file \textit{app/db/schema.rb}:
 
-\lstinputlisting[style=Ruby, caption=db/schema.rb, label=lst:dbschema]{code/schema.rb}
+\lstinputlisting[style=Ruby, caption=app/db/schema.rb, label=lst:dbschema]{code/schema.rb}
 
 Da notare gli attributi \textit{index}: essi indicano delle foreign key, cioè riferimenti ad altre tabelle.
 
@@ -523,21 +524,85 @@ Da notare gli attributi \textit{index}: essi indicano delle foreign key, cioè r
 
 \section{Application Layer}
 
-Qualche parola sul file application.controller + tabella con le route principali + codice controller principali (da scegliere)
+Nell' Application Layer risiede la logica dell'applicazione, implementata attraverso i controller. In particolare, le configurazioni principali sono definite nel file \textit{app/controllers/application\_controller.rb} (listing \ref{lst:app_controller}), che contiene il codice dell'Application Controller. Esso è lo scheletro su cui poggia tutta la struttura, e le caratteristiche qui definite saranno ereditate da tutti gli altri controller.\\
+In generale, i controller si occupano di processare le chiamate fatte dal browser verso l'applicazione, usando i dati contenuti nel Data Layer, esposti dai model, e presentandoli attraverso le view. Grazie al file \textit{config/routes.rb}, le richieste HTTP sono mappate nei correspondenti metodi definiti nei controller. Nella seguente tabella sono elencate le principali routes dell'applicazione. 
+
+\begin{center}
+	\begin{longtable}[H]{p{0.15\textwidth}p{0.2\textwidth}p{0.3\textwidth}p{0.25\textwidth}}
+		\toprule
+		\textbf{Metodo HTTP} & \textbf{URI Pattern} & \textbf{Controller\#Action} & \textbf{Effetto} \\
+		\midrule
+		\rowcolor[gray]{0.9}
+		GET & /users/sign\_in (.:format) & devise/sessions\#new & Restituisce la pagina con la form per il login \\
+		\midrule
+		POST & /users/sign\_in (.:format) & devise/sessions\#create & Dopo aver registrato o loggato l'utente restituisce la pagina di default per esso \\
+		\midrule
+		\rowcolor[gray]{0.9}
+		GET|POST & /users/auth /google\_oauth2 (.:format) & omniauth\_callbacks \#passthru & Restituisce la pagina relativa a OAuth di Google \\
+		\midrule
+		GET|POST & /users/auth /google\_oauth2 /callback (.:format) & omniauth\_callbacks \#google\_oauth2 & Una volta completato il login restituisce la dashboard relatica all'utente \\
+		\midrule
+		\rowcolor[gray]{0.9}
+		GET & /users/sign\_up (.:format) & registrations\#new & Restituisce la pagina di registrazione dell'utente \\
+		\midrule
+		POST & /users(.:format) & registrations\#create & Registra l'utente nel database \\
+		\midrule
+		\rowcolor[gray]{0.9}
+		GET & /home/index (.:format) & home\#index & Restituisce la pagina iniziale dell'applicazione \\
+		\midrule 
+		GET & /home /school\_class\_new (.:format) & home\#school\_class\_new & Restituisce la seconda form per completare la registrazione \\
+		\midrule
+		\rowcolor[gray]{0.9}
+		POST & /home /school\_class\_new (.:format) & home\#create & Registra la classe e la scuola di interesse per l'utente e lo reindirizza sulla sua dashboard se la registrazione è andata a buon fine.\\
+		\midrule 
+		GET & /dashboard (.:format) & dashboard\#get & Restituisce la dashboard dell'utente loggato\\
+		\midrule
+		\rowcolor[gray]{0.9}
+		GET & /dashboard /delete\_file (.:format) & dashboard\#delete\_file & Cancella il file il cui link è stato selezionato\\
+		\midrule
+		GET & /dashboard /download\_file (.:format) & dashboard\#download\_file & Fa il download del file il cui link è stato selezionato\\
+		\midrule
+		\rowcolor[gray]{0.9}
+		POST & /dashboard (.:format) & dashboard\#upload\_file & Fa l'upload del file il cui link è stato selezionato\\
+		\midrule
+		GET & /subjects(.:format) & subjects\#index & Restituisce la pagina dove sono mostrate le materie di interesse \\
+		\midrule 
+		GET & /subjects/:id (.:format) & subjects\#show & Restituisce la pagina relativa alla singola materia il cui link è stato selezionato \\
+		\midrule
+		\rowcolor[gray]{0.9}
+		GET & /subjects/:id /download\_file (.:format) & subjects\#view\_file & Fa il download del file il cui link è stato selezionato dalla pagina di una singola materia \\
+		\midrule 
+		POST & /posts(.:format) & posts\#create & Crea un nuovo post e reindirizza l'utente sulla dashboad\\
+		\midrule 
+		GET & /posts/new (.:format) & posts\#new & Restituisce la pagina con la form per creare un nuovo post\\
+		\midrule
+		\rowcolor[gray]{0.9}
+		GET & / & home\#index & Definisce la pagina iniziale dell'applicazione come root \\
+		\bottomrule
+	\end{longtable}
+\end{center}
+
+Nel listing \ref{lst:dashboard_controller} è mostrato anche il file \textit{app/controllers/dashboard\_controller.rb}, l'altro principale controller su cui si basa l'applicazione.\\ 
+
+\lstinputlisting[style=Ruby, caption=app/controllers/application\_controller.rb, label=lst:app_controller]{code/application_controller.rb}
+
+Si noti il codice necessario per far funzionare correttamente Devise, i servizi Google Drive e il protocollo OAuth.\\
+
+\lstinputlisting[style=Ruby, caption=app/controllers/dashboard\_controller.rb, label=lst:dashboard_controller]{code/dashboard_controller.rb}
+
+Nel Dashboard controller è invece possibile vedere il codice che si occupa di processare i principali contenuti della dashboard: come prima cosa si controlla che l'utente si sia autenticato, altrimenti viene rimandato alla pagina di login. Successivamente si recuperano le principali informazioni su di esso, sui file e sui post.
 
 \section{Presentation Layer}
 
-Spiegazione dell'organizzazione delle view (application.layout), uso di bootstrap e scss + screenshot delle view con 1 riga di descrizione per ognuna
-
-Il Presentation Layer è costituito dall'insieme delle view che vengono presentate all'utente. Esse sono state realizzate mediante il linguaggio HAML, e si trovano nella cartella \textit{views}. Per lo styling sono stati usati i file SCSS definiti nella cartella \textit{assets/stylesheets}. Nella cartella \textit{assets/images} si trovano le immagini rese nel browser (in questo caso il logo HiSchool).\\
-Nel rispetto del principio Don't Repeat Yoursel, sono stati creati i file \textit{views/layouts/application.html.haml} (Figura \ref{lst:application_layout}) e \textit{assets/stylesheets/application.css.scss} (Figura \ref{lst:application_css}, che essendo ereditati dall'intera applicazione forniscono lo styling di base generale.\\
+Il Presentation Layer è costituito dall'insieme delle view che vengono presentate all'utente. Esse sono state realizzate mediante il linguaggio HAML, e si trovano nella cartella \textit{app/views}. Per lo styling sono stati usati i file SCSS definiti nella cartella \textit{app/assets/stylesheets}. Nella cartella \textit{app/assets/images} si trovano le immagini rese nel browser (in questo caso il logo HiSchool).\\
+Nel rispetto del principio Don't Repeat Yoursel, sono stati creati i file \textit{app/views/layouts/application.html.haml} (Listing \ref{lst:application_layout}) e \textit{app/assets/stylesheets/application.css.scss} (Listing \ref{lst:application_css}, che essendo ereditati dall'intera applicazione forniscono lo styling di base generale.\\
 Inoltre si è fatto spesso uso di partials.
 
 \lstset{language=HAML, , captionpos=b, frame=single}
-\lstinputlisting[language=HAML, style=CSS, caption=views/layouts/application.html.haml, label=lst:application_layout]{code/application.html.haml}
+\lstinputlisting[language=HAML, style=CSS, caption=app/views/layouts/application.html.haml, label=lst:application_layout]{code/application.html.haml}
 
 \lstset{language=CSS, , captionpos=b, frame=single}
-\lstinputlisting[language=CSS, style=CSS, caption=assets/stylesheets/application.css.scss, label=lst:application_css]{code/application.css.scss}
+\lstinputlisting[language=CSS, style=CSS, caption=app/assets/stylesheets/application.css.scss, label=lst:application_css]{code/application.css.scss}
 
 \subsection{Aspetto dell'applicazione}
 In questa sezione verranno presentate le view dell'applicazione, le dimensioni sono state riadattate per una migliore impaginazione. Nella figura \ref{fig:home_page} si può vedere la schermata che accoglie l'utente avviata la piattaforma:
@@ -545,7 +610,7 @@ In questa sezione verranno presentate le view dell'applicazione, le dimensioni s
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{images/home_page} 
-	\caption{views/home/index.html.haml}
+	\caption{app/views/home/index.html.haml}
 	\label{fig:home_page}
 \end{figure}
 
@@ -554,48 +619,48 @@ Una volta premuto il bottone \textbf{Registrati} ci si ritrova nella pagina di r
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{images/registration_page} 
-	\caption{views/home/registrations/new.html.haml}
+	\caption{app/views/home/registrations/new.html.haml}
 	\label{fig:registration_page}
 \end{figure}
 
-A seconda del ruolo selezionato, se tutti i campi della form sono stati compilati correttamente, premendo il bottone \textbf{Registrati} si arriva a pagine dall'aspetto diverso. Esse sono però definite tutte nello stesso file di codice: \textit{views/home/school\_class\_new.html.haml}. 
+A seconda del ruolo selezionato, se tutti i campi della form sono stati compilati correttamente, premendo il bottone \textbf{Registrati} si arriva a pagine dall'aspetto diverso. Esse sono però definite tutte nello stesso file di codice: \textit{app/views/home/school\_class\_new.html.haml}. 
 Se viene selezionato il ruolo di \textit{Genitore} si arriverà alla pagina in figura \ref{fig:school_p_form}, se si è selezionato \textit{Studente}      a quella in figura \ref{fig:school_s_form}, e infine se si è selezionato \textit{Insegnante} ci si ritroverà una schermata come quella in figura \ref{fig:school_t_form}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{images/school_p_form} 
-	\caption{views/home/school\_class\_new.html.haml}
+	\caption{app/views/home/school\_class\_new.html.haml}
 	\label{fig:school_p_form}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{images/school_s_form} 
-	\caption{views/home/school\_class\_new.html.haml}
+	\caption{app/views/home/school\_class\_new.html.haml}
 	\label{fig:school_s_form}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{images/school_t_form} 
-	\caption{views/home/school\_class\_new.html.haml}
+	\caption{app/views/home/school\_class\_new.html.haml}
 	\label{fig:school_t_form}
 \end{figure}
 
-In tutti e tre i casi, una volta compilati gli ultimi campi e premuto il bottone \textbf{Completa la registrazione}, l'utente risulta registrato e verrà reindirizzato alla sua dashboard. Anch'essa è differente a seconda dei ruoli, ed è ottenuta combinanto diverse partial (\textit{views/dashboard/\_common.html.ham} e \textit{views/dashboard/\_posts.html.haml}) in diversi file. Nella figura \ref{fig:p_dashboard} è mostrata quella per il Genitore, nella \ref{fig:s_dashboard} quella per lo Studente e nella \ref{fig:t_dashboard} quella per l'Insegnante.\\
-Si noti come in tutte le dashboard sono presenti i dati fondamentali dell'utente, il calendario (dove è segnato in verde accesso il giorno corrente e in giallo le scadenze delle comunicazioni) e i post relativi alla classe di interesse. In tutte è inoltre presente il bottone \textbf{Logout} per tornare alla pagina iniziale e terminare la sessione.
+In tutti e tre i casi, una volta compilati gli ultimi campi e premuto il bottone \textbf{Completa la registrazione}, l'utente risulta registrato e verrà reindirizzato alla sua dashboard. Anch'essa è differente a seconda dei ruoli, ed è ottenuta combinanto diverse partial (\textit{app/views/dashboard/\_common.html.ham} e \textit{app/views/dashboard/\_posts.html.haml}) in diversi file. Nella figura \ref{fig:p_dashboard} è mostrata quella per il Genitore, nella \ref{fig:s_dashboard} quella per lo Studente e nella \ref{fig:t_dashboard} quella per l'Insegnante.\\
+Si noti come in tutte le dashboard sono presenti i dati fondamentali dell'utente, il calendario (dove è segnato in verde acceso il giorno corrente e in giallo le scadenze delle comunicazioni) e i post relativi alla classe di interesse. In tutte è inoltre presente il bottone \textbf{Logout} per tornare alla pagina iniziale e terminare la sessione.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{images/p_dashboard} 
-	\caption{views/dashboard/parent\_dashboard.html.haml}
+	\caption{app/views/dashboard/parent\_dashboard.html.haml}
 	\label{fig:p_dashboard}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{images/s_dashboard} 
-	\caption{views/dashboard/student\_dashboard.html.haml}
+	\caption{app/views/dashboard/student\_dashboard.html.haml}
 	\label{fig:s_dashboard}
 \end{figure}
 
@@ -604,7 +669,7 @@ Nella pagina della Studente è presente anche il bottone \textbf{Materie}. Clicc
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{images/materie_page} 
-	\caption{views/subjects/index.html.haml}
+	\caption{app/views/subjects/index.html.haml}
 	\label{fig:materie_page}
 \end{figure}
 
@@ -613,7 +678,7 @@ Se si clicca sul bottone \textbf{Dashboard} si ritorna nell'omonima pagina, ment
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{images/materia_page} 
-	\caption{views/subjects/show.html.haml}
+	\caption{app/views/subjects/show.html.haml}
 	\label{fig:materia_page}
 \end{figure}
 
@@ -625,7 +690,7 @@ Seguendo inoltre il bottone \textbf{Nuovo Post} si avrà a disposizione la pagin
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{images/t_dashboard} 
-	\caption{views/dashboard/teacher\_dashboard.html.haml}
+	\caption{app/views/dashboard/teacher\_dashboard.html.haml}
 	\label{fig:t_dashboard}
 \end{figure}
 
@@ -634,7 +699,7 @@ Cliccando il tasto \textbf{Pubblica}, previa adeguata compilazione dei campi, ve
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{images/new_post} 
-	\caption{views/posts/new.html.haml}
+	\caption{app/views/posts/new.html.haml}
 	\label{fig:nuovo_post}
 \end{figure}
 
@@ -644,7 +709,7 @@ A login effettuato ci si ritroverà sulla dashboard corrispondente al proprio ru
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{images/login} 
-	\caption{views/users/sessions/new.html.haml}
+	\caption{app/views/users/sessions/new.html.haml}
 	\label{fig:login}
 \end{figure}
 
@@ -660,7 +725,28 @@ A login effettuato ci si ritroverà sulla dashboard corrispondente al proprio ru
 
 \section{Installazione}
 
-Passi da git clone a rails server
+Per installare l'applicazione è necessario posizionarsi nella directory di lavoro ed eseguire i seguenti comandi:
+\begin{enumerate}
+	\item \textit{git clone https://github.com/SilviadelPiano/HiSchool.git}
+	\item \textit{bundle install}
+	\item \textit{rake db:migrate}
+\end{enumerate}
+
+A questo punto perchè l'applicazione funzioni occorre registrare almeno una scuola e una classe, si apra quindi la console di Rails con il comando
+\begin{itemize}
+	\item \textit{rails console}
+\end{itemize}
+
+e si registrino i dati necessari con questa utilizzando questa sintassi:
+\begin{itemize}
+	\item \textit{> School.create(name: "nome\_scuola")}
+	\item \textit{> SchoolClass.create(name: "nome\_classe", school\_id: "id\_scuola (appena ritornato dalla console)")}
+\end{itemize}
+
+Se le transazioni sono andate a buon fine si può far partire l'applicazione con il comando 
+\begin{itemize}
+	\item \textit{rails server}
+\end{itemize}
 
 \section{Test}
 
