@@ -421,7 +421,7 @@ Di seguito è riportato il \textit{Gemfile} con tutte le gemme utilizzate:\\
 \lstinputlisting[style=Ruby, caption=Gemfile, label=lst:gemfile]{code/Gemfile}
 Una discussione degli strumenti usati per i test si può trovare nella sezione TODO\\
 
-\section{Agile per lo sviluppo software}
+\section{Agile per lo sviluppo software} \label{agile}
 
 Nel realizzare questa applicazione mi sono ispirata alla metodologia Agile. Essa è in realtà pensata per gruppi di persone che lavorano insieme allo stesso software: le interazione tra i vari membri di un singolo team e tra i responsabili di questi hanno un'enorme importanza, e sono il vero punto di forza di questa metodologia, insieme al contatto con il committente.\\
 Nonostante ciò, in questo lavoro ho voluto tenere fede ai principi di Behavior-Driven Design e Test-Driven Development. Di conseguenza, prima dello sviluppo del codice, nella fase di progettazione, sono stati realizzati i lo-fi mockup e le user stories per fare chiarezza su cosa doveva essere realizzato. Successivamente, durante lo sviluppo, per ogni user story veniva scritto un test e il codice per soddisfarlo, in modo che tutto fosse fatto in modo corretto. Ponendo l'attenzione sulla qualità e sui contenuti da subito si sono evitati lunghi e tortuosi processi di debug, oltre all'implementazione di funzionalità inutili o non richieste.
@@ -750,6 +750,20 @@ Se le transazioni sono andate a buon fine si può far partire l'applicazione con
 
 \section{Test}
 
-Metodo Agile -> Test con cucumber e capybara (mostra i file più importanti) + file rspec con oauth. brakeman e gemsurance per i test di sicurezza. byebug per il debugging durante lo sviluppo 
+Da ultimo, si descriverà in breve la politica usata per effettuare i test.\\ 
+Come spiegato nella sezione \ref{agile}, monitorare costantemente la correttezza dell'applicazione è stato fondamentale. Durante lo sviluppo è stata usata la gemma \textit{byebug}, uno strumento per il debugging interattivo. Per i test veri e propri si sono usati sopratutto Cucumber e Capybara con l'ausilio di Factory Bot (erede di Factory Girl). Factory Bot crea degli oggetti fantoccio da usare durante i test, mentre Cucumber e Capybara si occupano di testare i vari scenari che rappresentano i comportamenti dell'utente. Tutti i file relativi sono contenuti nella cartella \textit{features}, dove sono particolarmente importanti i file contenuti nella cartella \textit{features/step\_definitions}, in quanto in essi è definito il modo in cui Cucumber dovrà interpretare i passi definiti nei file \textit{.feature}. Un altro componente fondamentale è il file \textit{features/support/paths.rb}, dove viene definita la traduzione dal linguaggio naturale alle routes dell'applicazione. I test per OAuth sono stati scritti nel file \textit{spec/google\_oauth\_spec.rb} poichè necessitava di uno stub (cioè una simulazione dell'oggetto) più elaborata.\\
+Per far partire i test bisogna digitare i comandi 
+\begin{itemize}
+	\item \textit{bundle exec test\_with\_coveralls} per i test di Cucumber
+	\item \textit{rspec} per i test con rspec
+\end{itemize}
+
+Sono stati effettuati anche test sulla sicuezza tramite la gemma \textit{brakeman}: essa testa vari tipi di attacchi sull'applicazione per controolare che sia sicura. Per farli partire basta digitare il comando 
+\begin{itemize}
+	\item \textit{brakeman}
+\end{itemize}
+
+Infine, per monitorare la versione e a relativa sicurezza di tutte le gemme si è usata \textit{gemsurance}, la quale genera un report apribile con il browser dove sono segnalate eventuali vulnerabilità. 
+
 
 \end{document}
