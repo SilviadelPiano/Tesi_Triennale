@@ -175,7 +175,7 @@ In quanto pensata per affiancarsi alle piattaforme già esistenti per la scuola,
 
 \section{Dati gestiti dal sistema e principali funzionalità} \label{requisiti_db}
 
-Essa prevede tre tipi di utenti: gli studenti (Student), gli insegnanti (Teacher) e i genitori (Parent). Di ogni utente sono memorizzati in un database il nome, il cognome, il codice fiscale, la data e il luogo di nascita, il sesso, la scuola (tra quelle registrate sulla piattaforma dagli sviluppatori), la classe (tra quelle registrate per ciascuna scuola), il ruolo (tra Studente, Insegnante e Genitore). Saranno memorizzati anche una mail e una password con cui si potrà effettuare il login al sito, e nel caso del Genitore, anche il nome e il cognome del figlio iscritto alla scuola. Ad ogni modo, per agevolare l’accesso alla piattaforma sarà fornito anche il servizio di autenticazione tramite Google. Ogni utente ha una propria Dashboard da dove, a seconda del ruolo, può usufruire di diverse funzionalità. Tutti gli utenti possono vedere le informazioni fondamentali associate al proprio account, il calendario e i post contenenti comunicazioni relative alla classe di interesse pubblicate dagli insegnanti; le communicazioni possono avere associata anche una scadenza che verrà mostrata sul calendario. I post saranno memorizzati nell’applicazione. Lo Studente può navigare nell’applicazione per consultare le singole pagine relative alle materie studiate, dove è caricato il materiale di cui può fare il download. L’Insegnante può creare i post; togliere, fare il download e l’upload delle risorse relative alla materia che insegna.\\
+Essa prevede tre tipi di utenti: gli studenti (Student), gli insegnanti (Teacher) e i genitori (Parent). Di ogni utente sono memorizzati in un database il nome, il cognome, il codice fiscale, la data e il luogo di nascita, il sesso, la scuola (tra quelle registrate sulla piattaforma dagli sviluppatori), la classe (tra quelle registrate per ciascuna scuola), il ruolo (tra Studente, Insegnante e Genitore). Saranno memorizzati anche una mail e una password con cui si potrà effettuare il login al sito, e nel caso del Genitore, anche il nome e il cognome del figlio iscritto alla scuola. Ad ogni modo, per agevolare l’accesso alla piattaforma sarà fornito anche il servizio di autenticazione tramite Google. Ogni utente ha una propria Dashboard da dove, a seconda del ruolo, può usufruire di diverse funzionalità. Tutti gli utenti possono vedere le informazioni fondamentali associate al proprio account, il calendario e i post contenenti comunicazioni relative alla classe di interesse pubblicate dagli insegnanti; le communicazioni possono avere associata anche una scadenza che verrà mostrata sul calendario. I post saranno memorizzati nell’applicazione. Lo Studente può navigare nell’applicazione per consultare le singole pagine relative alle materie studiate, dove è caricato il materiale di cui può fare il download. L’Insegnante può creare i post e cancellare, fare il download e l’upload delle risorse relative alla materia che insegna.\\
 Per semplicità nell’implementazione si assume che ogni Insegnante abbia affidata una sola materia, che ogni Genitore possa avere solo un figlio iscritto alla scuola, che ogni materia sia spiegata da un solo Insegnante e che abbia senso definire una scuola senza classi; tutto ciò considerando la classe frequentata dall’alunno. Tuttavia, lo schema del database è pensato per una maggiore scalabilità, e il codice l'applicazione è stato scritto in modo che essa sia facilmente modificabile o ampliabile. \\
 Tutti i file che costituiscono risorse per gli Studenti sono conservati sul Google Drive associato all’account dell’applicazione.\\
 
@@ -250,14 +250,14 @@ Di seguito si riporta l'elenco delle user stories: descrivono brevemente ma in m
 			As a user\\
 			So that I can use the app’s services\\
 			Given I’m in the "LogIn" page\\
-			and that I’ve signed up as a "Parent"\\
+			and that I’ve signed up\\
 			When I fill the form correctly\\
-			and I press the button "LogIn"\\
-			Then I should be logged in as a "Parent"and I should be in the "Dashboard\_g" page\\
+			and I press the button "Login"\\
+			Then I should be logged in and I should be in the correct "Dashboard\_*" page\\
 	\item \textbf{LogIn with Google}\\
 			As a user\\
 			So that I can use the app’s services\\
-			Given I’ve signed up as a "Student" or as a "Teacher"\\
+			Given I’ve signed up\\
 			I want to log in with Google OAuth\\
 	\item \textbf{Go to the "Home" page from the "LogIn" page}\\
 			As a user\\
@@ -277,7 +277,8 @@ Di seguito si riporta l'elenco delle user stories: descrivono brevemente ma in m
 			So that I can know the current date and organize my work properly\\
 			Given I’m in the correct "Dashboard\_*" page\\
 			Then I should see the current date\\
-	\item \textbf{Posts seen by "Student"As a "Student"}\\
+	\item \textbf{Posts seen by "Student" as a "Student"}\\
+			As a "Student"\\
 			So that I can see the posts all my "Teacher"s made\\
 			Given I’m on the "Dashboard\_s" page\\
 			Then I should see the 10 most recent posts\\
@@ -318,8 +319,8 @@ Di seguito si riporta l'elenco delle user stories: descrivono brevemente ma in m
 			Then I should see the 5 most recent posts made by the "Teacher" corresponding to that subject\\
 	\item \textbf{Posts seen by "Teacher"}\\
 			As a "Teacher"\\
-			So that I can see understand the workload my "Student"s have\\
-			Given I’ in the "Dahsboard\_t" page\\
+			So that I can see the workload my "Student"s have\\
+			Given I’m in the "Dahsboard\_t" page\\
 			Then I should see the 10 most recent posts made by me and the other "Teacher"s who teach my "Student"s\\
 	\item \textbf{Remove a file}\\
 			As a "Teacher"\\
@@ -331,7 +332,7 @@ Di seguito si riporta l'elenco delle user stories: descrivono brevemente ma in m
 			As a "Teacher"\\
 			So that I can download files\\
 			Given I’m in the "Dashboard\_t" page\\
-			When I clicked on the “Download” link corresponding to the file I want to download\\
+			When I click on the “Download” link corresponding to the file I want to download\\
 			Then the file corresponding to the link I clicked should be downloaded\\
 	\item \textbf{Upload a file}\\
 			As a user\\
@@ -355,7 +356,8 @@ Di seguito si riporta l'elenco delle user stories: descrivono brevemente ma in m
 			Then a new post should be published correctly\\
 	\item \textbf{Posts seen by a "Parent"}\\
 			As a "Parent"\\
-			So that I can be updated on my son’s scholastic situationGiven I’m in the "Dashboard\_p" page\\
+			So that I can be updated on my son’s scholastic situation\\
+			Given I’m in the "Dashboard\_p" page\\
 			Then I should see the posts made by my son’s "Teacher"s\\
 \end{enumerate}
 
@@ -390,7 +392,7 @@ OAuth è un protocollo di rete basato su HTTP che consente di delegare l’auten
 	\item \textbf{Utente} (Resource Owner): è il possessore dell’account, e deve autorizzare l’accesso alle informazioni contenute in esso e alle risorse protette conservate nel Resource Server
 	\item \textbf{Client} (Consumer): è l’applicazione che vorrebbe accedere alle informazioni e risorse dell’Utente, di cui chiede l’autorizzazione
 	\item \textbf{Resource Server}: il server dove si trovano le risorse protette dell’Utente
-	\item \textbf{Authorization Server}: è il server che si occupa di richiedere all’Utente di autenticarsi (con le credenziali di quest’ultimo) per autorizzare l’accesso alle sue risorse
+	\item \textbf{Authorization Server}: è il server che si occupa di richiedere all’Utente di autenticarsi per autorizzare l’accesso alle sue risorse
 \end{enumerate}
 
 Lo schema di funzionamento è descritto dalla seguente immagine:\\
@@ -413,13 +415,13 @@ Per gestire i file (upload, download) ed interagire con questo servizio è stata
 
 \subsection{Altre gemme}
 
-Per una più completa trattazione dello sviluppo si è cominciato ad impostare il deploy su Heroku, tramite le gemme \textit{rails\_12factor}(per configurare l'ambiente di produzione dell'applicazione), \textit{pg} (in quanto il database di Heroku è basato su PostgreSQL e non su SQLite usato per lo sviluppo) e \textit{figaro} (per gestire le chiavi e gli ID segreti negli ambienti di sviluppo e produzione).\\
+Per una più completa trattazione dello sviluppo si è cominciato ad impostare il deploy su Heroku, tramite le gemme \textit{rails\_12factor} (per configurare l'ambiente di produzione dell'applicazione), \textit{pg} (in quanto il database di Heroku è basato su PostgreSQL e non su SQLite, usato durante lo sviluppo) e \textit{figaro} (per gestire le chiavi e gli ID segreti negli ambienti di sviluppo e produzione).\\
 Per realizzare il calendario nella Dashboard degli utenti si è usata \textit{simple\_calendar}, mentre per fare i diagrammi UML deli controller e dei model si è utilizzata \textit{railroady}.\\
 Di seguito è riportato il \textit{Gemfile} con tutte le gemme utilizzate:\\
 
 
 \lstinputlisting[style=Ruby, caption=Gemfile, label=lst:gemfile]{code/Gemfile}
-Una discussione degli strumenti usati per i test si può trovare nella sezione TODO\\
+Una discussione degli strumenti usati per i test si può trovare nella sezione \ref{test}.\\
 
 \section{Agile per lo sviluppo software} \label{agile}
 
@@ -460,10 +462,10 @@ Durante la ristrutturazione Parent, Student e Teacher sono state accorpate a Use
 
 \subsection{Entità School e Class}
 L'entità \textbf{School} rappresenta la scuola registrata nel database dell'applicazione, ed è legata a \textbf{Class} tramite la relazione \textbf{Has}. Class è infatti identificata dal proprio nome e dalla Scuola a cui appartiene. Per esempio, la classe 1\ap{a} del liceo scientifico sarà presente in tutti i licei scientifici, ed almeno in 1, altrimenti non esisterebbe, da qui l'associazione 1...n. Una Scuola deve avere almeno una classe.\\
-La relazione \textbf{Teaches} esprime l'incarico di insegnamento conferito ad un \textbf{Teacher} (insegnante) nei confronti della classe, ed è presente anche la materia (subject) oggetto di lezione. Ogni classe può essere presa in carico da diversi insegnanti, ma ne deve avere almeno 1 (si pensi solo alle varie materie presenti in  un liceo) ed un singolo insegnante, per essere tale, deve fare lezione ad almeno un classe, ma può averne affidate più di una.\\
+La relazione \textbf{Teaches} esprime l'incarico di insegnamento conferito ad un \textbf{Teacher} (insegnante) nei confronti della classe, ed è presente anche la materia (Subject) oggetto di lezione. Ogni classe può essere presa in carico da diversi insegnanti, ma ne deve avere almeno 1 (si pensi solo alle varie materie presenti in  un liceo), ed un singolo insegnante, per essere tale, deve fare lezione ad almeno un classe, ma può averne affidate più di una.\\
 La relazione \textbf{MemberOf} invece esprime il fatto che ogni classe debba essere frequentata da almeno uno studente, e questo per essere tale deve, e può, essere iscritto ad una sola classe.\\
-Nella ristruttrazione Class e Has sono state accorpate per generare un'unica entità che tenga traccia del nome della classe e della scuola ad essa associata. School rimane singolarmente, in modo che nel futuro sia possibile associare ad essa più classi. Inoltre, al momento della registrazione
-all'utente viene chiesto di specificare una classe ed una scuola (in diversi punti dei form da compilare a seconda del ruolo), e sono effettuati due controlli: si verifica l'esistenza della singola scuola (School) nel database, e poi si verfica che per questa sia registrata la classe dichiarata nel form tramite l'entità appena creata con l'accorpamento. Quest'ultima è utile anche per motivi di efficienza del codice.
+Nella ristruttrazione Class e Has sono state accorpate per generare un'unica entità che tenga traccia del nome della classe e della scuola ad essa associata. School rimane indipendente, in modo che nel futuro sia possibile associare ad essa più classi. Inoltre, al momento della registrazione
+all'utente viene chiesto di specificare una classe ed una scuola (con diverse form da compilare a seconda del ruolo), e sono effettuati due controlli: si verifica l'esistenza della singola scuola (School) nel database, e poi si verfica che per questa sia registrata la classe dichiarata nel form tramite l'entità appena creata con l'accorpamento. Quest'ultima è utile anche per motivi di efficienza del codice.
 
 \subsection{Entità Post}
 L'entità \textbf{Post} rappresenta le comunicazioni che possono essere fatte sulla piattaforma. Ogni Post deve essere creato da un singolo insegnante secondo quanto espresso dalla relazione \textbf{MadeBy}, mentre un insegnante non ha l'obbligo di creare Post, e non c'è limite a quanti ne può fare. L'attributo PublishDate registra la data della pubblicazione.
@@ -512,7 +514,7 @@ In questa sezione infine è possibile visionare il diagramma UML relativo alle v
 \section{Progettazione logica del Data Layer}
 
 Come spiegato nella sezione \ref{mvc} Rails è basato sul paradigma Model-View-Controller, quindi nel Data-Layer sono conservati i dati che verranno usati dalle altre componenti delll'applicazione. Tutto ciò è possibile, nell'ambiente di sviluppo, grazie alla gemma \textit{sqlite3}.\\
-Rails offre al programmatore un buon livello di automatizzazione di diversi compiti, tra cui la creazione e la modifica del database: lo schema è conservato nel file \textit{app/db/schema}, il quale viene modificato tramite altri file detti migration, raccolti nella cartella \textit{app/db/migrate}.
+Rails offre al programmatore un buon livello di automatizzazione di diversi compiti, tra cui la creazione e la modifica del database: lo schema è conservato nel file \textit{app/db/schema.rb}, il quale viene modificato tramite altri file detti migration, raccolti nella cartella \textit{app/db/migrate}.
 In questo modo la probabilità di commettere errori umani (distrazione, battitura, ecc.) è minimizzata e si aumenta l'efficienza del lavoro.
 Di seguito il file \textit{app/db/schema.rb}:
 
@@ -545,7 +547,7 @@ In generale, i controller si occupano di processare le chiamate fatte dal browse
 		\rowcolor[gray]{0.9}
 		GET & /users/sign\_up (.:format) & registrations\#new & Restituisce la pagina di registrazione dell'utente \\
 		\midrule
-		POST & /users(.:format) & registrations\#create & Registra l'utente nel database \\
+		POST & /users(.:format) & registrations\#create & Registra l'utente nel database e reindirizza sulla pagina contenente la seconda form per complatare la registrazione\\
 		\midrule
 		\rowcolor[gray]{0.9}
 		GET & /home/index (.:format) & home\#index & Restituisce la pagina iniziale dell'applicazione \\
@@ -594,8 +596,8 @@ Nel Dashboard controller è invece possibile vedere il codice che si occupa di p
 
 \section{Presentation Layer}
 
-Il Presentation Layer è costituito dall'insieme delle view che vengono presentate all'utente. Esse sono state realizzate mediante il linguaggio HAML, e si trovano nella cartella \textit{app/views}. Per lo styling sono stati usati i file SCSS definiti nella cartella \textit{app/assets/stylesheets}. Nella cartella \textit{app/assets/images} si trovano le immagini rese nel browser (in questo caso il logo HiSchool).\\
-Nel rispetto del principio Don't Repeat Yoursel, sono stati creati i file \textit{app/views/layouts/application.html.haml} (Listing \ref{lst:application_layout}) e \textit{app/assets/stylesheets/application.css.scss} (Listing \ref{lst:application_css}, che essendo ereditati dall'intera applicazione forniscono lo styling di base generale.\\
+Il Presentation Layer è costituito dall'insieme delle view che vengono presentate all'utente. Esse sono state realizzate mediante il linguaggio HAML, e si trovano nella cartella \textit{app/views}. Per lo styling sono stati usati i file SCSS definiti nella cartella \textit{app/assets/stylesheets}, assieme alla gemma \textit{bootstrap} per l'utilizzo dell'omonima libreria. Nella cartella \textit{app/assets/images} si trovano le immagini rese nel browser (in questo caso il logo HiSchool).\\
+Nel rispetto del principio Don't Repeat Yoursel, sono stati creati i file \textit{app/views/layouts/application.html.haml} (Listing \ref{lst:application_layout}) e \textit{app/assets/stylesheets/application.css.scss} (Listing \ref{lst:application_css}), che essendo ereditati dall'intera applicazione forniscono lo styling di base generale.\\
 Inoltre si è fatto spesso uso di partials.
 
 \lstset{language=HAML, , captionpos=b, frame=single}
@@ -732,33 +734,33 @@ Per installare l'applicazione è necessario posizionarsi nella directory di lavo
 	\item \textit{rake db:migrate}
 \end{enumerate}
 
-A questo punto perchè l'applicazione funzioni occorre registrare almeno una scuola e una classe, si apra quindi la console di Rails con il comando
+A questo punto perchè l'applicazione funzioni correttamente occorre registrare almeno una scuola e una classe, si apra quindi la console di Rails con il comando
 \begin{itemize}
 	\item \textit{rails console}
 \end{itemize}
 
-e si registrino i dati necessari con questa utilizzando questa sintassi:
+e si registrino i dati necessari utilizzando questa sintassi:
 \begin{itemize}
 	\item \textit{> School.create(name: "nome\_scuola")}
 	\item \textit{> SchoolClass.create(name: "nome\_classe", school\_id: "id\_scuola (appena ritornato dalla console)")}
 \end{itemize}
 
-Se le transazioni sono andate a buon fine si può far partire l'applicazione con il comando 
+Se le transazioni sono andate a buon fine si può far partire l'applicazione con il seguente comando da terminale: 
 \begin{itemize}
 	\item \textit{rails server}
 \end{itemize}
 
-\section{Test}
+\section{Test} \label{test}
 
 Da ultimo, si descriverà in breve la politica usata per effettuare i test.\\ 
-Come spiegato nella sezione \ref{agile}, monitorare costantemente la correttezza dell'applicazione è stato fondamentale. Durante lo sviluppo è stata usata la gemma \textit{byebug}, uno strumento per il debugging interattivo. Per i test veri e propri si sono usati sopratutto Cucumber e Capybara con l'ausilio di Factory Bot (erede di Factory Girl). Factory Bot crea degli oggetti fantoccio da usare durante i test, mentre Cucumber e Capybara si occupano di testare i vari scenari che rappresentano i comportamenti dell'utente. Tutti i file relativi sono contenuti nella cartella \textit{features}, dove sono particolarmente importanti i file contenuti nella cartella \textit{features/step\_definitions}, in quanto in essi è definito il modo in cui Cucumber dovrà interpretare i passi definiti nei file \textit{.feature}. Un altro componente fondamentale è il file \textit{features/support/paths.rb}, dove viene definita la traduzione dal linguaggio naturale alle routes dell'applicazione. I test per OAuth sono stati scritti nel file \textit{spec/google\_oauth\_spec.rb} poichè necessitava di uno stub (cioè una simulazione dell'oggetto) più elaborata.\\
+Come spiegato nella sezione \ref{agile}, monitorare costantemente la correttezza dell'applicazione è stato fondamentale. Durante lo sviluppo è stata usata la gemma \textit{byebug}, uno strumento per il debugging interattivo. Per i test veri e propri si sono usati sopratutto Cucumber e Capybara con l'ausilio di Factory Bot (erede di Factory Girl). Factory Bot crea degli oggetti fantoccio da usare in questa fase, mentre Cucumber e Capybara si occupano di testare i vari scenari che rappresentano i comportamenti dell'utente. Tutti i file relativi sono contenuti nella cartella \textit{features}, dove sono particolarmente importanti i file contenuti nella cartella \textit{features/step\_definitions}, in quanto in essi è definito il modo in cui Cucumber dovrà interpretare i passi definiti nei file \textit{.feature}. Un altro componente fondamentale è il file \textit{features/support/paths.rb}, dove viene definita la traduzione dal linguaggio naturale alle routes dell'applicazione. I test per OAuth sono stati scritti nel file \textit{spec/google\_oauth\_spec.rb} poichè necessitava di uno stub (cioè una simulazione dell'oggetto) più elaborata.\\
 Per far partire i test bisogna digitare i comandi 
 \begin{itemize}
-	\item \textit{bundle exec test\_with\_coveralls} per i test di Cucumber
+	\item \textit{bundle exec rake test\_with\_coveralls} per i test di Cucumber
 	\item \textit{rspec} per i test con rspec
 \end{itemize}
 
-Sono stati effettuati anche test sulla sicuezza tramite la gemma \textit{brakeman}: essa testa vari tipi di attacchi sull'applicazione per controolare che sia sicura. Per farli partire basta digitare il comando 
+Sono stati effettuati anche test sulla sicuezza tramite la gemma \textit{brakeman}: essa simula vari tipi di attacchi sull'applicazione per controllare che sia sicura. Per farli partire basta digitare il comando 
 \begin{itemize}
 	\item \textit{brakeman}
 \end{itemize}

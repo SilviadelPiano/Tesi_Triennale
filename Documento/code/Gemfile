@@ -65,7 +65,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'coveralls', :require => false # to use Coveralls.io for test coverage
   gem 'simplecov', :require => false
-  #gem 'jasmine-rails'               # to test JavaScript/CoffeeScript, not sure if it will be used
+  #gem 'jasmine-rails'               # to test JavaScript/CoffeeScript
 end
 
 group :development do

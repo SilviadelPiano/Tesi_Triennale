@@ -1,6 +1,5 @@
 class DashboardController < ApplicationController
 
-# ci arrivo anche dai login, quindi mi conviene fare la query
 
     def get
         if !user_signed_in?

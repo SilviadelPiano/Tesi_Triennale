@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.16)  20 NOV 2019 01:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.16)  20 NOV 2019 11:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1670,72 +1670,72 @@ Underfull \hbox (badness 10000) in paragraph at lines 275--280
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--284
+Underfull \hbox (badness 10000) in paragraph at lines 280--285
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 284--289
+Underfull \hbox (badness 10000) in paragraph at lines 285--290
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--295
+Underfull \hbox (badness 10000) in paragraph at lines 290--296
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--301
+Underfull \hbox (badness 10000) in paragraph at lines 296--302
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--307
+Underfull \hbox (badness 10000) in paragraph at lines 302--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--314
+Underfull \hbox (badness 10000) in paragraph at lines 308--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--319
+Underfull \hbox (badness 10000) in paragraph at lines 315--320
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 319--324
+Underfull \hbox (badness 10000) in paragraph at lines 320--325
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--330
+Underfull \hbox (badness 10000) in paragraph at lines 325--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--336
+Underfull \hbox (badness 10000) in paragraph at lines 331--337
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--343
+Underfull \hbox (badness 10000) in paragraph at lines 337--344
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--349
+Underfull \hbox (badness 10000) in paragraph at lines 344--350
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--356
+Underfull \hbox (badness 10000) in paragraph at lines 350--357
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 356--360
+Underfull \hbox (badness 10000) in paragraph at lines 357--362
 
  []
 
@@ -1744,24 +1744,24 @@ Capitolo 2.
 [11
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 396--397
+Underfull \hbox (badness 10000) in paragraph at lines 398--399
 
  []
 
 <images/oauth.png, id=282, 284.39583pt x 160.93459pt>
 File: images/oauth.png Graphic file (type png)
 <use images/oauth.png>
-Package pdftex.def Info: images/oauth.png  used on input line 400.
+Package pdftex.def Info: images/oauth.png  used on input line 402.
 (pdftex.def)             Requested size: 356.39758pt x 201.69324pt.
 [12 <./images/oauth.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 416--419
+Underfull \hbox (badness 10000) in paragraph at lines 418--421
 
  []
 
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 421.
+nput line 423.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
-21.
+23.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1784,60 +1784,55 @@ Package microtype Info: Character `texttrademark ' is missing
 (microtype)             in font `TS1/lmtt/m/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
  [13] [14])
-Underfull \hbox (badness 10000) in paragraph at lines 422--423
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
 
  []
 
-[15] [16]
+[15]
 Capitolo 3.
-<images/db_HiSchool.png, id=417, 668.4975pt x 563.10374pt>
+<images/db_HiSchool.png, id=414, 668.4975pt x 563.10374pt>
 File: images/db_HiSchool.png Graphic file (type png)
 <use images/db_HiSchool.png>
-Package pdftex.def Info: images/db_HiSchool.png  used on input line 448.
+Package pdftex.def Info: images/db_HiSchool.png  used on input line 450.
 (pdftex.def)             Requested size: 396.0pt x 333.57732pt.
-[17
+[16
 
- <./images/db_HiSchool.png>] [18] [19]
+ <./images/db_HiSchool.png>] [17] [18]
 Capitolo 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 481--482
+Underfull \hbox (badness 10000) in paragraph at lines 483--484
 
  []
 
-<images/controllers_UML.jpg, id=434, 980.66376pt x 946.53625pt>
+<images/controllers_UML.jpg, id=431, 980.66376pt x 946.53625pt>
 File: images/controllers_UML.jpg Graphic file (type jpg)
 <use images/controllers_UML.jpg>
-Package pdftex.def Info: images/controllers_UML.jpg  used on input line 485.
+Package pdftex.def Info: images/controllers_UML.jpg  used on input line 487.
 (pdftex.def)             Requested size: 396.0pt x 382.21854pt.
-[20
+[19
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 492--493
+Underfull \hbox (badness 10000) in paragraph at lines 494--495
 
  []
 
-<images/models_UML.jpg, id=442, 1008.76875pt x 517.935pt>
+<images/models_UML.jpg, id=438, 1008.76875pt x 517.935pt>
 File: images/models_UML.jpg Graphic file (type jpg)
 <use images/models_UML.jpg>
-Package pdftex.def Info: images/models_UML.jpg  used on input line 496.
+Package pdftex.def Info: images/models_UML.jpg  used on input line 498.
 (pdftex.def)             Requested size: 396.0pt x 203.32153pt.
-[21 <./images/controllers_UML.jpg>]
-<images/UML_views.png, id=449, 798.985pt x 704.6325pt>
+[20 <./images/controllers_UML.jpg>]
+<images/UML_views.png, id=446, 798.985pt x 704.6325pt>
 File: images/UML_views.png Graphic file (type png)
 <use images/UML_views.png>
-Package pdftex.def Info: images/UML_views.png  used on input line 507.
+Package pdftex.def Info: images/UML_views.png  used on input line 509.
 (pdftex.def)             Requested size: 396.0pt x 349.24037pt.
- [22 <./images/models_UML.jpg>]
-(./code/schema.rb [23 <./images/UML_views.png>] [24]) [25]
+ [21 <./images/models_UML.jpg>]
+(./code/schema.rb [22 <./images/UML_views.png>] [23]) [24]
 Capitolo 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 533--533
+Underfull \hbox (badness 10000) in paragraph at lines 535--535
 []|\T1/lmr/bx/n/10.95 Metodo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 536--536
-[]|\T1/lmr/m/n/10.95 (+20) /users/sign_in
  []
 
 
@@ -1846,283 +1841,293 @@ Underfull \hbox (badness 10000) in paragraph at lines 538--538
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 541--541
+Underfull \hbox (badness 10000) in paragraph at lines 540--540
+[]|\T1/lmr/m/n/10.95 (+20) /users/sign_in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 543--543
 []|\T1/lmr/m/n/10.95 (+20) /users/auth
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 541--541
+Underfull \hbox (badness 10000) in paragraph at lines 543--543
 \T1/lmr/m/n/10.95 (+20) /goo-gle_oauth2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 541--541
+Underfull \hbox (badness 10000) in paragraph at lines 543--543
 []|\T1/lmr/m/n/10.95 (+20) omniauth_callbacks
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 543--543
+Underfull \hbox (badness 10000) in paragraph at lines 545--545
 []|\T1/lmr/m/n/10.95 (+20) /users/auth
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 543--543
+Underfull \hbox (badness 10000) in paragraph at lines 545--545
 \T1/lmr/m/n/10.95 (+20) /goo-gle_oauth2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 543--543
+Underfull \hbox (badness 10000) in paragraph at lines 545--545
 \T1/lmr/m/n/10.95 (+20) /call-back
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 543--543
+Underfull \hbox (badness 10000) in paragraph at lines 545--545
 []|\T1/lmr/m/n/10.95 (+20) omniauth_callbacks
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 546--546
+Underfull \hbox (badness 10000) in paragraph at lines 548--548
 []|\T1/lmr/m/n/10.95 (+20) /users/sign_up
  []
 
 
-Underfull \hbox (badness 1521) in paragraph at lines 546--547
+Underfull \hbox (badness 1521) in paragraph at lines 548--549
 \T1/lmr/m/n/10.95 (+20) na di re-gi-stra-zio-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--551
-[]|\T1/lmr/m/n/10.95 (+20) /home/index
+Underfull \hbox (badness 1715) in paragraph at lines 550--551
+\T1/lmr/m/n/10.95 (+20) te-nen-te la se-con-da
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 553--553
+[]|\T1/lmr/m/n/10.95 (+20) /home/index
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 555--555
 []|\T1/lmr/m/n/10.95 (+20) /home
  []
 
 
-Overfull \hbox (9.51187pt too wide) in paragraph at lines 553--553
-\T1/lmr/m/n/10.95 (-20) /school_class_new
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 556--556
-[]|\T1/lmr/m/n/10.95 (+20) /home
- []
-
-
-Overfull \hbox (9.51187pt too wide) in paragraph at lines 556--556
+Overfull \hbox (9.51187pt too wide) in paragraph at lines 555--555
 \T1/lmr/m/n/10.95 (-20) /school_class_new
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 558--558
+[]|\T1/lmr/m/n/10.95 (+20) /home
+ []
+
+
+Overfull \hbox (9.51187pt too wide) in paragraph at lines 558--558
+\T1/lmr/m/n/10.95 (-20) /school_class_new
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 560--560
 []|\T1/lmr/m/n/10.95 (+20) /dashboard
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 561--561
+Underfull \hbox (badness 10000) in paragraph at lines 563--563
 []|\T1/lmr/m/n/10.95 (+20) /dashboard
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 561--561
+Underfull \hbox (badness 10000) in paragraph at lines 563--563
 \T1/lmr/m/n/10.95 (+20) /de-le-te_file
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 563--563
+Underfull \hbox (badness 10000) in paragraph at lines 565--565
 []|\T1/lmr/m/n/10.95 (+20) /dashboard
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 563--563
+Underfull \hbox (badness 10000) in paragraph at lines 565--565
 \T1/lmr/m/n/10.95 (+20) /do-wn-load_file
  []
 
 
-Overfull \hbox (4.68741pt too wide) in paragraph at lines 563--563
+Overfull \hbox (4.68741pt too wide) in paragraph at lines 565--565
 []|\T1/lmr/m/n/10.95 (-20) dashboard#download_file| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--566
+Underfull \hbox (badness 10000) in paragraph at lines 568--568
 []|\T1/lmr/m/n/10.95 (+20) /dashboard
  []
 
 
-Underfull \hbox (badness 1127) in paragraph at lines 566--567
+Underfull \hbox (badness 1127) in paragraph at lines 568--569
 \T1/lmr/m/n/10.95 (+20) il cui link è sta-to
  []
 
 
-Overfull \hbox (9.48703pt too wide) in paragraph at lines 568--568
+Overfull \hbox (9.48703pt too wide) in paragraph at lines 570--570
 []|\T1/lmr/m/n/10.95 (-20) /subjects(.:format)| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 570--570
+Underfull \hbox (badness 10000) in paragraph at lines 572--572
 []|\T1/lmr/m/n/10.95 (+20) /subjects/:id
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 573--573
+Underfull \hbox (badness 10000) in paragraph at lines 575--575
 []|\T1/lmr/m/n/10.95 (+20) /subjects/:id
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 573--573
+Underfull \hbox (badness 10000) in paragraph at lines 575--575
 \T1/lmr/m/n/10.95 (+20) /do-wn-load_file
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 577--577
+Underfull \hbox (badness 10000) in paragraph at lines 579--579
 []|\T1/lmr/m/n/10.95 (+20) /posts/new
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 580--581
+Underfull \hbox (badness 1132) in paragraph at lines 582--583
 \T1/lmr/m/n/10.95 (+20) ini-zia-le del-l'ap-pli-ca-
  []
 
 
-Overfull \hbox (8.39758pt too wide) in alignment at lines 531--581
+Overfull \hbox (8.39758pt too wide) in alignment at lines 533--583
  [] [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 581
+Underfull \vbox (badness 10000) detected at line 583
  []
 
 
-Overfull \hbox (8.39758pt too wide) in alignment at lines 581--582
+Overfull \hbox (8.39758pt too wide) in alignment at lines 583--584
  [] [] [] [] 
  []
 
-[26
+[25
 
-] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 585--586
-
- []
-
-(./code/application_controller.rb [28])
-Underfull \hbox (badness 10000) in paragraph at lines 589--590
+] [26]
+Underfull \hbox (badness 10000) in paragraph at lines 587--588
 
  []
 
-(./code/dashboard_controller.rb [29]) (./code/application.html.haml [30]
+(./code/application_controller.rb [27])
+Underfull \hbox (badness 10000) in paragraph at lines 591--592
+
+ []
+
+(./code/dashboard_controller.rb [28]) [29] (./code/application.html.haml
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 8.
 )
-(./code/application.css.scss [31]) [32]
-<images/home_page.jpg, id=813, 1373.13pt x 633.36626pt>
+(./code/application.css.scss [30] [31])
+<images/home_page.jpg, id=806, 1373.13pt x 633.36626pt>
 File: images/home_page.jpg Graphic file (type jpg)
 <use images/home_page.jpg>
-Package pdftex.def Info: images/home_page.jpg  used on input line 612.
+Package pdftex.def Info: images/home_page.jpg  used on input line 614.
 (pdftex.def)             Requested size: 396.0pt x 182.65675pt.
-<images/registration_page.jpg, id=815, 1102.1175pt x 622.325pt>
+<images/registration_page.jpg, id=808, 1102.1175pt x 622.325pt>
 File: images/registration_page.jpg Graphic file (type jpg)
 <use images/registration_page.jpg>
-Package pdftex.def Info: images/registration_page.jpg  used on input line 621.
+Package pdftex.def Info: images/registration_page.jpg  used on input line 623.
 (pdftex.def)             Requested size: 396.0pt x 223.60951pt.
- [33 <./images/home_page.jpg> <./images/registration_page.jpg>]
-<images/school_p_form.jpg, id=826, 1057.9525pt x 423.5825pt>
+ [32 <./images/home_page.jpg>]
+<images/school_p_form.jpg, id=821, 1057.9525pt x 423.5825pt>
 File: images/school_p_form.jpg Graphic file (type jpg)
 <use images/school_p_form.jpg>
-Package pdftex.def Info: images/school_p_form.jpg  used on input line 631.
+Package pdftex.def Info: images/school_p_form.jpg  used on input line 633.
 (pdftex.def)             Requested size: 396.0pt x 158.54573pt.
-<images/school_s_form.jpg, id=827, 1088.065pt x 406.51875pt>
+<images/school_s_form.jpg, id=822, 1088.065pt x 406.51875pt>
 File: images/school_s_form.jpg Graphic file (type jpg)
 <use images/school_s_form.jpg>
-Package pdftex.def Info: images/school_s_form.jpg  used on input line 638.
+Package pdftex.def Info: images/school_s_form.jpg  used on input line 640.
 (pdftex.def)             Requested size: 396.0pt x 147.9532pt.
-<images/school_t_form.jpg, id=828, 1047.915pt x 419.5675pt>
+ [33 <./images/registration_page.jpg> <./images/school_p_form.jpg>]
+<images/school_t_form.jpg, id=831, 1047.915pt x 419.5675pt>
 File: images/school_t_form.jpg Graphic file (type jpg)
 <use images/school_t_form.jpg>
-Package pdftex.def Info: images/school_t_form.jpg  used on input line 645.
+Package pdftex.def Info: images/school_t_form.jpg  used on input line 647.
 (pdftex.def)             Requested size: 396.0pt x 158.54741pt.
- [34 <./images/school_p_form.jpg> <./images/school_s_form.jpg> <./images/school
-_t_form.jpg>]
-<images/p_dashboard.jpg, id=839, 1346.02875pt x 787.94376pt>
+<images/p_dashboard.jpg, id=835, 1346.02875pt x 787.94376pt>
 File: images/p_dashboard.jpg Graphic file (type jpg)
 <use images/p_dashboard.jpg>
-Package pdftex.def Info: images/p_dashboard.jpg  used on input line 655.
+Package pdftex.def Info: images/p_dashboard.jpg  used on input line 657.
 (pdftex.def)             Requested size: 396.0pt x 231.8162pt.
-<images/s_dashboard.jpg, id=840, 1450.41875pt x 686.565pt>
+ [34 <./images/school_s_form.jpg> <./images/school_t_form.jpg>]
+<images/s_dashboard.jpg, id=843, 1450.41875pt x 686.565pt>
 File: images/s_dashboard.jpg Graphic file (type jpg)
 <use images/s_dashboard.jpg>
-Package pdftex.def Info: images/s_dashboard.jpg  used on input line 662.
+Package pdftex.def Info: images/s_dashboard.jpg  used on input line 664.
 (pdftex.def)             Requested size: 396.0pt x 187.4493pt.
- [35 <./images/p_dashboard.jpg> <./images/s_dashboard.jpg>]
-<images/materie_page.jpg, id=849, 1279.78125pt x 487.8225pt>
+<images/materie_page.jpg, id=845, 1279.78125pt x 487.8225pt>
 File: images/materie_page.jpg Graphic file (type jpg)
 <use images/materie_page.jpg>
-Package pdftex.def Info: images/materie_page.jpg  used on input line 671.
+Package pdftex.def Info: images/materie_page.jpg  used on input line 673.
 (pdftex.def)             Requested size: 396.0pt x 150.948pt.
-<images/materia_page.jpg, id=851, 1276.77pt x 521.95pt>
+ [35 <./images/p_dashboard.jpg> <./images/s_dashboard.jpg>]
+<images/materia_page.jpg, id=852, 1276.77pt x 521.95pt>
 File: images/materia_page.jpg Graphic file (type jpg)
 <use images/materia_page.jpg>
-Package pdftex.def Info: images/materia_page.jpg  used on input line 680.
+Package pdftex.def Info: images/materia_page.jpg  used on input line 682.
 (pdftex.def)             Requested size: 396.0pt x 161.88246pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 685--686
+Underfull \hbox (badness 10000) in paragraph at lines 687--688
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 687--689
+Underfull \hbox (badness 10000) in paragraph at lines 689--691
 
  []
 
-<images/t_dashboard.jpg, id=854, 1202.4925pt x 788.9475pt>
+<images/t_dashboard.jpg, id=855, 1202.4925pt x 788.9475pt>
 File: images/t_dashboard.jpg Graphic file (type jpg)
 <use images/t_dashboard.jpg>
-Package pdftex.def Info: images/t_dashboard.jpg  used on input line 692.
+Package pdftex.def Info: images/t_dashboard.jpg  used on input line 694.
 (pdftex.def)             Requested size: 396.0pt x 259.81175pt.
 [36 <./images/materie_page.jpg> <./images/materia_page.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 697--698
+Underfull \hbox (badness 10000) in paragraph at lines 699--700
 
  []
 
 <images/new_post.jpg, id=862, 1237.62375pt x 727.71875pt>
 File: images/new_post.jpg Graphic file (type jpg)
 <use images/new_post.jpg>
-Package pdftex.def Info: images/new_post.jpg  used on input line 701.
+Package pdftex.def Info: images/new_post.jpg  used on input line 703.
 (pdftex.def)             Requested size: 396.0pt x 232.84145pt.
 [37 <./images/t_dashboard.jpg> <./images/new_post.jpg>]
 <images/login.jpg, id=871, 1283.79625pt x 451.6875pt>
 File: images/login.jpg Graphic file (type jpg)
 <use images/login.jpg>
-Package pdftex.def Info: images/login.jpg  used on input line 711.
+Package pdftex.def Info: images/login.jpg  used on input line 713.
 (pdftex.def)             Requested size: 396.0pt x 139.32556pt.
 <images/google_oauth.jpg, id=872, 589.20125pt x 619.31375pt>
 File: images/google_oauth.jpg Graphic file (type jpg)
 <use images/google_oauth.jpg>
-Package pdftex.def Info: images/google_oauth.jpg  used on input line 718.
+Package pdftex.def Info: images/google_oauth.jpg  used on input line 720.
 (pdftex.def)             Requested size: 396.0pt x 416.24216pt.
  [38 <./images/login.jpg>] [39 <./images/google_oauth.jpg>]
 Capitolo 6.
 [40
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 769.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 771.
  [41]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 769.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 771.
  (./tesi_triennale.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 769.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 769.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 771.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 771.
 Package rerunfilecheck Info: File `tesi_triennale.out' has not changed.
 (rerunfilecheck)             Checksum: FF75E4E91B5D3A5DE8B79135AE3C58D0;2400.
  ) 
 Here is how much of TeX's memory you used:
- 25831 strings out of 492167
- 436686 string characters out of 6125373
- 963382 words of memory out of 5000000
- 29184 multiletter control sequences out of 15000+600000
- 621363 words of font info for 137 fonts, out of 8000000 for 9000
+ 25825 strings out of 492167
+ 436608 string characters out of 6125373
+ 958382 words of memory out of 5000000
+ 29185 multiletter control sequences out of 15000+600000
+ 621020 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,12n,100p,1503b,2224s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,12n,100p,1506b,2251s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/texlive/2019/
 texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2019/texmf-dist
@@ -2136,10 +2141,10 @@ texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2019/texmf-dist
 e1/public/lm/lmss17.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/
 lm/lmtk10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt10.
 pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt9.pfb>
-Output written on tesi_triennale.pdf (46 pages, 8133470 bytes).
+Output written on tesi_triennale.pdf (46 pages, 8133572 bytes).
 PDF statistics:
  1055 PDF objects out of 1200 (max. 8388607)
  957 compressed objects within 10 object streams
- 533 named destinations out of 1000 (max. 500000)
+ 532 named destinations out of 1000 (max. 500000)
  28540 words of extra memory for PDF output out of 29859 (max. 10000000)
 
