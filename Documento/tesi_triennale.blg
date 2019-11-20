@@ -1,0 +1,66 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: tesi_triennale.aux
+The style file: sapthesis.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: biblio.bib
+Warning--to sort, need author or key in GUIDA
+Warning--to sort, need author or key in WIKI
+Warning--to sort, need author or key in STACKO
+Warning--empty author in GUIDA
+Warning--empty journal in GUIDA
+Warning--empty year in GUIDA
+Warning--empty author in STACKO
+Warning--empty journal in STACKO
+Warning--empty year in STACKO
+Warning--empty author in WIKI
+Warning--empty journal in WIKI
+Warning--empty year in WIKI
+Warning--empty journal in LIBRO
+Warning--empty year in LIBRO
+You've used 4 entries,
+            3472 wiz_defined-function locations,
+            709 strings with 5812 characters,
+and the built_in function-call counts, 1163 in all, are:
+= -- 94
+> -- 10
+< -- 0
++ -- 6
+- -- 2
+* -- 62
+:= -- 151
+add.period$ -- 8
+call.type$ -- 4
+change.case$ -- 13
+chr.to.int$ -- 0
+cite$ -- 18
+duplicate$ -- 85
+empty$ -- 126
+format.name$ -- 2
+if$ -- 283
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 17
+newline$ -- 19
+num.names$ -- 2
+pop$ -- 72
+preamble$ -- 1
+purify$ -- 9
+quote$ -- 0
+skip$ -- 69
+stack$ -- 0
+substring$ -- 20
+swap$ -- 19
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 16
+warning$ -- 14
+while$ -- 2
+width$ -- 5
+write$ -- 30
+(There were 14 warnings)

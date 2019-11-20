@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+
+\bibitem{GUIDA}
+{Ruby on Rails}.
+\newblock Available from: \url{{http://guides.rubyonrails.org}}.
+
+\bibitem{STACKO}
+{StackOverflow}.
+\newblock Available from: \url{{https://stackoverflow.com/}}.
+
+\bibitem{WIKI}
+{Wikipedia}.
+\newblock Available from: \url{{https://www.wikipedia.org}}.
+
+\bibitem{LIBRO}
+\textsc{{Armando Fox, David Patterson}}.
+\newblock {Engineering Software AS A Service, Agile Approach Using Cloud
+  Computing}.
+
+\end{thebibliography}
