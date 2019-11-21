@@ -152,7 +152,7 @@
 
 \maketitle
 
-\dedication{Da vedere}
+\dedication{}
 
 \tableofcontents
 
@@ -162,7 +162,7 @@
 
 \section{Descrizione della realtà di interesse}
 
-Un giorno parlando con i miei colleghi universitari, si è accennato alla comodità offerta dai siti relativi ai singoli corsi di studio. Essi infatti sono un porto sicuro per ogni studente iscritto, frequentante e non: è possibile trovarvi il materiale su cui studiare, informazioni e contatti dei professori a cui sono affidate le lezioni, loro comunicazioni e spesso molto altro. Tutti sanno che per qualsiasi dubbio possa sorgere a proposito di uno specifico corso il primo posto dove andare a guardare è il sito ad esso dedicato. Tutto ciò mi ha invogliato a realizzare qualcosa di simile per la scuola secondaria: una piattaforma che i prinicipali attori coinvolti (studenti, insegnanti e genitori) possano usare per facilitare la formazione dei ragazzi ed il suo monitoraggio.\\
+Un giorno parlando con i miei colleghi universitari, si è accennato alla comodità offerta dai siti relativi ai singoli corsi di studio. Essi infatti sono un porto sicuro per ogni studente iscritto, frequentante e non: è possibile trovarvi il materiale su cui studiare, informazioni e contatti dei professori a cui sono affidate le lezioni, loro comunicazioni e spesso molto altro. Tutti sanno che per qualsiasi dubbio possa sorgere a proposito di uno specifico corso il primo posto dove andare a guardare è il sito ad esso dedicato. Tutto ciò mi ha invogliato a realizzare qualcosa di simile per la scuola secondaria: una piattaforma che i principali attori coinvolti (studenti, insegnanti e genitori) possano usare per facilitare la formazione dei ragazzi ed il suo monitoraggio.\\
 I servizi fondamentali per la didattica offerti sono i seguenti:
 \begin{itemize}
 	\item Possibilità di visionare e gestire (per gli insegnanti) il materiale didattico.
@@ -176,7 +176,7 @@ In quanto pensata per affiancarsi alle piattaforme già esistenti per la scuola,
 \section{Dati gestiti dal sistema e principali funzionalità} \label{requisiti_db}
 
 Essa prevede tre tipi di utenti: gli studenti (Student), gli insegnanti (Teacher) e i genitori (Parent). Di ogni utente sono memorizzati in un database il nome, il cognome, il codice fiscale, la data e il luogo di nascita, il sesso, la scuola (tra quelle registrate sulla piattaforma dagli sviluppatori), la classe (tra quelle registrate per ciascuna scuola), il ruolo (tra Studente, Insegnante e Genitore). Saranno memorizzati anche una mail e una password con cui si potrà effettuare il login al sito, e nel caso del Genitore, anche il nome e il cognome del figlio iscritto alla scuola. Ad ogni modo, per agevolare l’accesso alla piattaforma sarà fornito anche il servizio di autenticazione tramite Google. Ogni utente ha una propria Dashboard da dove, a seconda del ruolo, può usufruire di diverse funzionalità. Tutti gli utenti possono vedere le informazioni fondamentali associate al proprio account, il calendario e i post contenenti comunicazioni relative alla classe di interesse pubblicate dagli insegnanti; le communicazioni possono avere associata anche una scadenza che verrà mostrata sul calendario. I post saranno memorizzati nell’applicazione. Lo Studente può navigare nell’applicazione per consultare le singole pagine relative alle materie studiate, dove è caricato il materiale di cui può fare il download. L’Insegnante può creare i post e cancellare, fare il download e l’upload delle risorse relative alla materia che insegna.\\
-Per semplicità nell’implementazione si assume che ogni Insegnante abbia affidata una sola materia, che ogni Genitore possa avere solo un figlio iscritto alla scuola, che ogni materia sia spiegata da un solo Insegnante e che abbia senso definire una scuola senza classi; tutto ciò considerando la classe frequentata dall’alunno. Tuttavia, lo schema del database è pensato per una maggiore scalabilità, e il codice l'applicazione è stato scritto in modo che essa sia facilmente modificabile o ampliabile. \\
+Per semplicità nell’implementazione si assume che ogni Insegnante abbia affidata una sola materia, che ogni Genitore possa avere solo un figlio iscritto alla scuola, che ogni materia sia spiegata da un solo Insegnante e che abbia senso definire una scuola senza classi; tutto ciò considerando la classe frequentata dall’alunno. Tuttavia, lo schema del database è pensato per una maggiore scalabilità, e il codice dell'applicazione è stato scritto in modo che essa sia facilmente modificabile o ampliabile. \\
 Tutti i file che costituiscono risorse per gli Studenti sono conservati sul Google Drive associato all’account dell’applicazione.\\
 
 \subsection{MockUp e User Stories}
@@ -187,7 +187,7 @@ Questi due strumenti sono fondamentali nella fase di raccolta dei requisiti e pr
 \newpage
 \subsection{Lo-Fi MockUp}
 
-Di seguito i lo-fi mockup, realizzati con carta e penna, rapprensentano ciò che l'utente vedrà sulla piattaforma e come potrà navigarla.\\
+Di seguito i lo-fi mockup da cui si è partiti per lo sviluppo. Sono stati realizzati con carta e penna, e rapprensentano ciò che l'utente vedrà sulla piattaforma e come potrà navigarla.\\
 
 \begin{figure}[H]
 	\centering
@@ -205,7 +205,7 @@ Di seguito i lo-fi mockup, realizzati con carta e penna, rapprensentano ciò che
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.3\linewidth, angle=-90]{images/mockup_3}
+	\includegraphics[width=1\linewidth]{images/mockup_3}
 	\caption{Lo-Fi-Mockup 3}
 	\label{fig:mockup_3}
 \end{figure}
@@ -218,43 +218,44 @@ Di seguito i lo-fi mockup, realizzati con carta e penna, rapprensentano ciò che
 \end{figure}
 
 \subsection{User Stories}
-Di seguito si riporta l'elenco delle user stories: descrivono brevemente ma in maniera efficace le azioni che verranno implementate fornendo i servizi precedentemente descritti agli utenti.\\
+Di seguito si riporta l'elenco delle user stories scritte nella fase iniziale di progettazione: descrivono brevemente e in maniera efficace le azioni che verranno implementate per fornire i servizi precedentemente descritti agli utenti.\\
 
 \begin{enumerate}
 	\item \textbf{Go to the "SignUp" page from the "Home" page}\\
 			As a user\\
 			So that I can sign up\\
-			Given I'm in the "Home" page\\
+			Given I'm on the "Home" page\\
 			When I press the button "SignUp"\\
-			Then I should be in the "SignUp" page\\
-	\item \textbf{SignUpAs a user}\\
+			Then I should be on the "SignUp" page\\
+	\item \textbf{SignUp}\\
+			As a user\\
 			So that I can use the app's services\\
-			Given I'm in the "SignUp" page\\
+			Given I'm on the "SignUp" page\\
 			When I fill the form correctly\\
 			and I press the button "SignUp"\\
 			Then I should be registered in the app\\
-			and I should be in the "Home" page\\
-	\item \textbf{Return to the "Home" page from the "SignUp" page}\\
+			and I should be on the "Home" page\\
+	\item \textbf{Go to the "Home" page from the "SignUp" page}\\
 			As a user\\
 			So that I can return to the "Home" page without signing up\\
-			Given I’m in the "SignUp" page\\
+			Given I’m on the "SignUp" page\\
 			When I press the button "Home"\\
-			Then I should be in the "Home" page\\
+			Then I should be on the "Home" page\\
 	\item \textbf{Go to the "LogIn" page from the "Home" page}\\
 			As a user\\
 			So that I can login\\
-			Given I’m in the "Home" page\\
+			Given I’m on the "Home" page\\
 			When I press the button "Login"\\
-			Then I should be in the "Login" page\\
-	\item \textbf{LogIn without Google}\\
+			Then I should be on the "Login" page\\
+	\item \textbf{Login without Google}\\
 			As a user\\
 			So that I can use the app’s services\\
-			Given I’m in the "LogIn" page\\
+			Given I’m on the "LogIn" page\\
 			and that I’ve signed up\\
 			When I fill the form correctly\\
 			and I press the button "Login"\\
-			Then I should be logged in and I should be in the correct "Dashboard\_*" page\\
-	\item \textbf{LogIn with Google}\\
+			Then I should be logged in and I should be on the correct "Dashboard\_*" page\\
+	\item \textbf{Login with Google}\\
 			As a user\\
 			So that I can use the app’s services\\
 			Given I’ve signed up\\
@@ -262,22 +263,22 @@ Di seguito si riporta l'elenco delle user stories: descrivono brevemente ma in m
 	\item \textbf{Go to the "Home" page from the "LogIn" page}\\
 			As a user\\
 			So that I can return to the "Home" page without logging in\\
-			Given I’m in the "LogIn" page\\
+			Given I’m on the "LogIn" page\\
 			When I press the button "Home"\\
-			Then I should be in the "Home" page\\
+			Then I should be on the "Home" page\\
 	\item \textbf{LogOut}\\
 			As a user\\
 			So that I can stop using the app’s services\\
-			Given I’m in the correct "Dashboard\_*" page\\
+			Given I’m on the correct "Dashboard\_*" page\\
 			When I press the button "LogOut"\\
 			Then I should have logged out correctly\\
-			and I should be in the "Home" page\\
+			and I should be on the "Home" page\\
 	\item \textbf{Calendar}\\
 			As a user\\
 			So that I can know the current date and organize my work properly\\
-			Given I’m in the correct "Dashboard\_*" page\\
+			Given I’m on the correct "Dashboard\_*" page\\
 			Then I should see the current date\\
-	\item \textbf{Posts seen by "Student" as a "Student"}\\
+	\item \textbf{Posts seen by "Student"}\\
 			As a "Student"\\
 			So that I can see the posts all my "Teacher"s made\\
 			Given I’m on the "Dashboard\_s" page\\
@@ -286,7 +287,7 @@ Di seguito si riporta l'elenco delle user stories: descrivono brevemente ma in m
 			As a user\\
 			So that I can go to the "Dashboard\_*" whenever I need it\\
 			When I press the button "Dashboard"\\
-			Then I should be in the correct "Dashboard\_*" page\\
+			Then I should be on the correct "Dashboard\_*" page\\
 	\item \textbf{Materie}\\
 			As a "Student"\\
 			So that I can see the subjects teached at school\\
@@ -296,50 +297,50 @@ Di seguito si riporta l'elenco delle user stories: descrivono brevemente ma in m
 	\item \textbf{Subject info}\\
 			As a "Student"\\
 			So that I can have more information about a subject\\
-			Given I’m in the "Materie" page\\
+			Given I’m on the "Materie" page\\
 			When I click che link corresponding to subject *\\
-			Then I should be in the page "Materia*" corresponding to subject *\\
+			Then I should be on the page "Materia*" corresponding to subject *\\
 	\item \textbf{Go to the "Materie" page from "Materia*" page}\\
 			As a "Student"\\
 			So that I can go to the "Materie" page from the "Materia*" page\\
-			Given I’m in the "Materia*" page\\
+			Given I’m on the "Materia*" page\\
 			When I press the button "Materie"\\
-			Then I should be in the "Materie" page\\
+			Then I should be on the "Materie" page\\
 	\item \textbf{Resources for a specific subject}\\
 			As a "Student"\\
 			So that I can use the resources on subject*\\
-			Given I’m in the "Materia*" page\\
+			Given I’m on the "Materia*" page\\
 			and I see the files that are the resources\\
 			When I click the link corresponding to a file\\
 			Then I should be able to download that file\\
 	\item \textbf{"Teacher"’s posts}\\
 			As a "Student"\\
-			So that I can have a focus on the specific subject*\\
-			Given I’m in the "Materia*" page\\
+			So that I can focus on a specific subject*\\
+			Given I’m on the "Materia*" page\\
 			Then I should see the 5 most recent posts made by the "Teacher" corresponding to that subject\\
 	\item \textbf{Posts seen by "Teacher"}\\
 			As a "Teacher"\\
 			So that I can see the workload my "Student"s have\\
-			Given I’m in the "Dahsboard\_t" page\\
+			Given I’m on the "Dahsboard\_t" page\\
 			Then I should see the 10 most recent posts made by me and the other "Teacher"s who teach my "Student"s\\
 	\item \textbf{Remove a file}\\
 			As a "Teacher"\\
 			So that I can remove files\\
-			Given I’m in the "Dashboard\_t" page\\
+			Given I’m on the "Dashboard\_t" page\\
 			When I click on the “Cancella” link corresponding to the file I want to remove\\
 			Then the file corresponding to the link I clicked should be removed\\
 	\item \textbf{Download a file}\\
 			As a "Teacher"\\
 			So that I can download files\\
-			Given I’m in the "Dashboard\_t" page\\
+			Given I’m on the "Dashboard\_t" page\\
 			When I click on the “Download” link corresponding to the file I want to download\\
 			Then the file corresponding to the link I clicked should be downloaded\\
 	\item \textbf{Upload a file}\\
-			As a user\\
+			As a "Teacher"\\
 			So that I can upload a file\\
-			Given I’m in the "CaricoFile" page\\
+			Given I’m on the "Dashboard\_t" page\\
 			And that I’ve specified what file I want to upload\\
-			When I press the button "Aggiungi"\\
+			When I press the button "Carica il file"\\
 			Then the file should be uploaded correctly\\
 	\item \textbf{Go to the "NewPost" page from the "Dashboard\_t" page}\\
 			As a "Teacher"\\
@@ -367,7 +368,7 @@ Di seguito si riporta l'elenco delle user stories: descrivono brevemente ma in m
 
 L’applicazione è stata realizzata con Ruby on Rails, seguendo i principi su cui esso è basato, e varie gemme in esso contenuto.\\
 In particolare, Rails è un framework per lo sviluppo di applicazioni web SaaS (Software as a Service) scritto in Ruby, ed è stato sviluppato tenendo a mente le più importanti linee guida nella progettazione e programmazione di questo tipo di software. Due dei principi fondamentali sono: Don’t Repeat Yourself (non ci deve essere codice ridondante, ma una singola scrittura efficace delle varie funzionalità e caratteristiche) e Conventions Over Configuratons (bisogna specificare delle configurazioni solo nel caso in cui non si seguano quelle raccomandate naturalmente dal framework).
-Tutto ciò è implementato col paradigma Model-View-Controller: i modelli servono per interagire con i dati del sistema, le view li visualizzano in maniera appropriata rendendo possibile l’interazione con gli utenti, mentre i controller ricevono i comandi di questi (solitamente attraverso le view e il browser) e li eseguono.
+Tutto ciò è implementato col paradigma Model-View-Controller: i model servono per interagire con i dati del sistema, le view li visualizzano in maniera appropriata rendendo possibile l’interazione con gli utenti, mentre i controller ricevono i comandi di questi (solitamente attraverso le view e il browser) e li eseguono.
 
 \subsection{Autenticazione locale}
 
@@ -404,7 +405,7 @@ Lo schema di funzionamento è descritto dalla seguente immagine:\\
 	\label{fig:oauth}
 \end{figure}
 
-In questo caso, l’Authorization Server e il Resource Server coincidono (Google), mentre il ruolo del client è svolto dalla nostra applicazione.\\
+In questo caso, l’Authorization Server e il Resource Server coincidono (Google), mentre il ruolo del Client è svolto dalla nostra applicazione.\\
 Per implementare tutto ciò ci si è serviti, come accennato in precedenza, del modulo Omniauthable di Devise in aggiunta alla gemma \textit{omniauth-googleoauth2}.
 
 \subsection{Google Drive}
@@ -425,7 +426,7 @@ Una discussione degli strumenti usati per i test si può trovare nella sezione \
 
 \section{Agile per lo sviluppo software} \label{agile}
 
-Nel realizzare questa applicazione mi sono ispirata alla metodologia Agile. Essa è in realtà pensata per gruppi di persone che lavorano insieme allo stesso software: le interazione tra i vari membri di un singolo team e tra i responsabili di questi hanno un'enorme importanza, e sono il vero punto di forza di questa metodologia, insieme al contatto con il committente.\\
+Nel realizzare questa applicazione mi sono ispirata alla metodologia Agile. Essa è in realtà pensata per gruppi di persone che lavorano insieme allo stesso software: le interazioni tra i vari membri di un singolo team e tra i responsabili di questi hanno un'enorme importanza, e sono il vero punto di forza di questa metodologia, insieme al contatto con il committente.\\
 Nonostante ciò, in questo lavoro ho voluto tenere fede ai principi di Behavior-Driven Design e Test-Driven Development. Di conseguenza, prima dello sviluppo del codice, nella fase di progettazione, sono stati realizzati i lo-fi mockup e le user stories per fare chiarezza su cosa doveva essere realizzato. Successivamente, durante lo sviluppo, per ogni user story veniva scritto un test e il codice per soddisfarlo, in modo che tutto fosse fatto in modo corretto. Ponendo l'attenzione sulla qualità e sui contenuti da subito si sono evitati lunghi e tortuosi processi di debug, oltre all'implementazione di funzionalità inutili o non richieste.
 
 \subsection{Tool per applicare al meglio Agile}
@@ -462,7 +463,7 @@ Durante la ristrutturazione Parent, Student e Teacher sono state accorpate a Use
 
 \subsection{Entità School e Class}
 L'entità \textbf{School} rappresenta la scuola registrata nel database dell'applicazione, ed è legata a \textbf{Class} tramite la relazione \textbf{Has}. Class è infatti identificata dal proprio nome e dalla Scuola a cui appartiene. Per esempio, la classe 1\ap{a} del liceo scientifico sarà presente in tutti i licei scientifici, ed almeno in 1, altrimenti non esisterebbe, da qui l'associazione 1...n. Una Scuola deve avere almeno una classe.\\
-La relazione \textbf{Teaches} esprime l'incarico di insegnamento conferito ad un \textbf{Teacher} (insegnante) nei confronti della classe, ed è presente anche la materia (Subject) oggetto di lezione. Ogni classe può essere presa in carico da diversi insegnanti, ma ne deve avere almeno 1 (si pensi solo alle varie materie presenti in  un liceo), ed un singolo insegnante, per essere tale, deve fare lezione ad almeno un classe, ma può averne affidate più di una.\\
+La relazione \textbf{Teaches} esprime l'incarico di insegnamento conferito ad un \textbf{Teacher} (insegnante) nei confronti della classe, ed è presente anche la materia (Subject) oggetto di lezione. Ogni classe può essere presa in carico da diversi insegnanti, ma ne deve avere almeno 1 (si pensi solo alle varie materie presenti in  un liceo), ed un singolo insegnante, per essere tale, deve fare lezione ad almeno una classe, ma può averne affidate più di una.\\
 La relazione \textbf{MemberOf} invece esprime il fatto che ogni classe debba essere frequentata da almeno uno studente, e questo per essere tale deve, e può, essere iscritto ad una sola classe.\\
 Nella ristruttrazione Class e Has sono state accorpate per generare un'unica entità che tenga traccia del nome della classe e della scuola ad essa associata. School rimane indipendente, in modo che nel futuro sia possibile associare ad essa più classi. Inoltre, al momento della registrazione
 all'utente viene chiesto di specificare una classe ed una scuola (con diverse form da compilare a seconda del ruolo), e sono effettuati due controlli: si verifica l'esistenza della singola scuola (School) nel database, e poi si verfica che per questa sia registrata la classe dichiarata nel form tramite l'entità appena creata con l'accorpamento. Quest'ultima è utile anche per motivi di efficienza del codice.
@@ -502,7 +503,7 @@ In questa sezione invece è riportato lo schema UML dei model. (Figura \ref{fig:
 
 \subsection{Architettura delle View}
 
-In questa sezione infine è possibile visionare il diagramma UML relativo alle views. (Figura \ref{fig:UML_views}).
+In questa sezione infine è possibile visionare il diagramma UML relativo alle view. (Figura \ref{fig:UML_views}).
 
 \begin{figure}[H]
 	\centering
@@ -526,7 +527,7 @@ Da notare gli attributi \textit{index}: essi indicano delle foreign key, cioè r
 
 \section{Application Layer}
 
-Nell' Application Layer risiede la logica dell'applicazione, implementata attraverso i controller. In particolare, le configurazioni principali sono definite nel file \textit{app/controllers/application\_controller.rb} (listing \ref{lst:app_controller}), che contiene il codice dell'Application Controller. Esso è lo scheletro su cui poggia tutta la struttura, e le caratteristiche qui definite saranno ereditate da tutti gli altri controller.\\
+Nell'Application Layer risiede la logica dell'applicazione, implementata attraverso i controller. In particolare, le configurazioni principali sono definite nel file \textit{app/controllers/application\_controller.rb} (listing \ref{lst:app_controller}), che contiene il codice dell'Application Controller. Esso è lo scheletro su cui poggia tutta la struttura, e le caratteristiche qui definite saranno ereditate da tutti gli altri controller.\\
 In generale, i controller si occupano di processare le chiamate fatte dal browser verso l'applicazione, usando i dati contenuti nel Data Layer, esposti dai model, e presentandoli attraverso le view. Grazie al file \textit{config/routes.rb}, le richieste HTTP sono mappate nei correspondenti metodi definiti nei controller. Nella seguente tabella sono elencate le principali routes dell'applicazione. 
 
 \begin{center}
@@ -597,8 +598,8 @@ Nel Dashboard controller è invece possibile vedere il codice che si occupa di p
 \section{Presentation Layer}
 
 Il Presentation Layer è costituito dall'insieme delle view che vengono presentate all'utente. Esse sono state realizzate mediante il linguaggio HAML, e si trovano nella cartella \textit{app/views}. Per lo styling sono stati usati i file SCSS definiti nella cartella \textit{app/assets/stylesheets}, assieme alla gemma \textit{bootstrap} per l'utilizzo dell'omonima libreria. Nella cartella \textit{app/assets/images} si trovano le immagini rese nel browser (in questo caso il logo HiSchool).\\
-Nel rispetto del principio Don't Repeat Yoursel, sono stati creati i file \textit{app/views/layouts/application.html.haml} (Listing \ref{lst:application_layout}) e \textit{app/assets/stylesheets/application.css.scss} (Listing \ref{lst:application_css}), che essendo ereditati dall'intera applicazione forniscono lo styling di base generale.\\
-Inoltre si è fatto spesso uso di partials.
+Nel rispetto del principio Don't Repeat Yourself, sono stati creati i file \textit{app/views/layouts/application.html.haml} (Listing \ref{lst:application_layout}) e \textit{app/assets/stylesheets/application.css.scss} (Listing \ref{lst:application_css}), che essendo ereditati dall'intera applicazione forniscono lo styling di base generale.\\
+Inoltre si è fatto spesso uso di partial.
 
 \lstset{language=HAML, , captionpos=b, frame=single}
 \lstinputlisting[language=HAML, style=CSS, caption=app/views/layouts/application.html.haml, label=lst:application_layout]{code/application.html.haml}
@@ -649,7 +650,7 @@ Se viene selezionato il ruolo di \textit{Genitore} si arriverà alla pagina in f
 	\label{fig:school_t_form}
 \end{figure}
 
-In tutti e tre i casi, una volta compilati gli ultimi campi e premuto il bottone \textbf{Completa la registrazione}, l'utente risulta registrato e verrà reindirizzato alla sua dashboard. Anch'essa è differente a seconda dei ruoli, ed è ottenuta combinanto diverse partial (\textit{app/views/dashboard/\_common.html.ham} e \textit{app/views/dashboard/\_posts.html.haml}) in diversi file. Nella figura \ref{fig:p_dashboard} è mostrata quella per il Genitore, nella \ref{fig:s_dashboard} quella per lo Studente e nella \ref{fig:t_dashboard} quella per l'Insegnante.\\
+In tutti e tre i casi, una volta compilati gli ultimi campi e premuto il bottone \textbf{Completa la registrazione}, l'utente risulta registrato e verrà reindirizzato alla sua dashboard. Anch'essa è differente a seconda dei ruoli, ed è ottenuta combinando diverse partial (\textit{app/views/dashboard/\_common.html.ham} e \textit{app/views/dashboard/\_posts.html.haml}) in diversi file. Nella figura \ref{fig:p_dashboard} è mostrata quella per il Genitore, nella \ref{fig:s_dashboard} quella per lo Studente e nella \ref{fig:t_dashboard} quella per l'Insegnante.\\
 Si noti come in tutte le dashboard sono presenti i dati fondamentali dell'utente, il calendario (dove è segnato in verde acceso il giorno corrente e in giallo le scadenze delle comunicazioni) e i post relativi alla classe di interesse. In tutte è inoltre presente il bottone \textbf{Logout} per tornare alla pagina iniziale e terminare la sessione.
 
 \begin{figure}[H]
@@ -666,7 +667,7 @@ Si noti come in tutte le dashboard sono presenti i dati fondamentali dell'utente
 	\label{fig:s_dashboard}
 \end{figure}
 
-Nella pagina della Studente è presente anche il bottone \textbf{Materie}. Cliccandolo si potrà accedere ad un'altra schermata dove verranno visualizzati i link alle pagine corrispondenti alle materie insegnate dai professori registrati. (Figura \ref{fig:materie_page}).
+Nella pagina dello Studente è presente anche il bottone \textbf{Materie}. Cliccandolo si potrà accedere ad un'altra schermata dove verranno visualizzati i link alle pagine corrispondenti alle materie insegnate dai professori registrati. (Figura \ref{fig:materie_page}).
 
 \begin{figure}[H]
 	\centering
@@ -753,14 +754,14 @@ Se le transazioni sono andate a buon fine si può far partire l'applicazione con
 \section{Test} \label{test}
 
 Da ultimo, si descriverà in breve la politica usata per effettuare i test.\\ 
-Come spiegato nella sezione \ref{agile}, monitorare costantemente la correttezza dell'applicazione è stato fondamentale. Durante lo sviluppo è stata usata la gemma \textit{byebug}, uno strumento per il debugging interattivo. Per i test veri e propri si sono usati sopratutto Cucumber e Capybara con l'ausilio di Factory Bot (erede di Factory Girl). Factory Bot crea degli oggetti fantoccio da usare in questa fase, mentre Cucumber e Capybara si occupano di testare i vari scenari che rappresentano i comportamenti dell'utente. Tutti i file relativi sono contenuti nella cartella \textit{features}, dove sono particolarmente importanti i file contenuti nella cartella \textit{features/step\_definitions}, in quanto in essi è definito il modo in cui Cucumber dovrà interpretare i passi definiti nei file \textit{.feature}. Un altro componente fondamentale è il file \textit{features/support/paths.rb}, dove viene definita la traduzione dal linguaggio naturale alle routes dell'applicazione. I test per OAuth sono stati scritti nel file \textit{spec/google\_oauth\_spec.rb} poichè necessitava di uno stub (cioè una simulazione dell'oggetto) più elaborata.\\
-Per far partire i test bisogna digitare i comandi 
+Come spiegato nella sezione \ref{agile}, monitorare costantemente la correttezza dell'applicazione è stato fondamentale. Durante lo sviluppo è stata usata la gemma \textit{byebug}, uno strumento per il debug interattivo. Per i test veri e propri si sono usati sopratutto Cucumber e Capybara con l'ausilio di Factory Bot (erede di Factory Girl). Factory Bot crea degli oggetti fantoccio da usare in questa fase, mentre Cucumber e Capybara si occupano di testare i vari scenari che rappresentano i comportamenti dell'utente. Tutti i file relativi sono contenuti nella cartella \textit{features}, dove sono particolarmente importanti i file contenuti nella cartella \textit{features/step\_definitions}, in quanto in essi è definito il modo in cui Cucumber dovrà interpretare i passi definiti nei file \textit{.feature}. Un altro componente fondamentale è il file \textit{features/support/paths.rb}, dove viene definita la traduzione dal linguaggio naturale alle route dell'applicazione. I test per OAuth sono stati scritti nel file \textit{spec/google\_oauth\_spec.rb} poichè necessitavano di uno stub (cioè una simulazione dell'oggetto) più elaborata.\\
+Per avviare i test bisogna digitare i comandi 
 \begin{itemize}
 	\item \textit{bundle exec rake test\_with\_coveralls} per i test di Cucumber
 	\item \textit{rspec} per i test con rspec
 \end{itemize}
 
-Sono stati effettuati anche test sulla sicuezza tramite la gemma \textit{brakeman}: essa simula vari tipi di attacchi sull'applicazione per controllare che sia sicura. Per farli partire basta digitare il comando 
+Sono stati effettuati anche test sulla sicurezza tramite la gemma \textit{brakeman}: essa simula vari tipi di attacchi sull'applicazione per controllare che sia robusta. Per farli partire basta digitare il comando 
 \begin{itemize}
 	\item \textit{brakeman}
 \end{itemize}
